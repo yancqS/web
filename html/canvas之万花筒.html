@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	#canvas{
+		background:#eee;
+	}	
+</style>
+<title>矩阵变换</title>
+</head>
+<script>
+ window.onload = function(){
+	 let canvas = document.getElementById("canvas");
+	 let cobj = canvas.getContext("2d");
+	 let arr = [];//存放矩形数据(比如矩形所画位置num、矩形旋转角度angel、缩放比例scale、以及矩形的颜色)的数组。这个数组里面的元素是一个个对象，每个对象有4个属性。形如:[{angel:,num:,scales:,color:},{angel:,num:,scales:,color:},{angel:,num:,scales:,color:},{angel:,num:,scales:,color:}...]
+	 //定时器1：负责将arr[]数组里的矩形画出来，并在每次画之前清楚画布，每一毫秒画一次
+	 setInterval(function(){
+		 cobj.clearRect(0,0,500,500);
+		for(let i = 0;i<arr.length;i++){
+			cobj.beginPath();
+		    cobj.save();
+	        cobj.translate(200,200);
+			cobj.scale(arr[i].scales,arr[i].scales);
+	        cobj.rotate(arr[i].angel*Math.PI/180);
+			cobj.fillStyle = arr[i].color;
+	        cobj.rect(arr[i].num,arr[i].num,30,30);
+	        cobj.fill();
+		    cobj.restore(); 
+		}
+	      },1);
+	 //定时器2：负责向arr[]数组添加矩形相关数据，每1s添加一次，也就是说不管第一个计时器执行多快，所画出矩形的速度受此定时器的控制
+	 setInterval(function(){
+		 let rect={//rect是一个对象，这个对象里面有4个属性：angel、num、scales、color。
+			 angel:0,
+			 num:100,
+			 scales:1, color:"rgb("+parseInt(255*Math.random())+","+parseInt(255*Math.random())+","+parseInt(255*Math.random())+")"
+		     }
+		 arr.push(rect);
+	 },1000);
+	 //定时器3:负责矩形所在位置、旋转角度、颜色的变化，每60ms矩形的角度、位置、颜色都会发生变化（这种变化是通过改变arr数组里面的num、scales、angel、color实现的）
+	 setInterval(function(){
+		 for(let i = 0;i<arr.length;i++){
+			 if(arr[i].num<=0){
+				 arr.splice(i,1);//从一个数组中移除一个或多个元素，如果必要，在所移除元素的位置上插入新元素，返回所移除的元素。arrayObj.splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]]),arrayObj必选项。一个 Array 对象。start必选项。指定从数组中移除元素的开始位置，这个位置是从 0 开始计算的。deleteCount必选项。要移除的元素的个数。
+                 continue;
+			 }
+			 if(arr[i].scales<=0.2){
+				 arr[i].scales = 0.2;
+			 }
+			 arr[i].angel+=2;
+			 arr[i].num-=0.2;
+			 arr[i].scales-=0.002; 
+		 }
+	 },60);
+		 } 	
+</script>
+  
+<body>
+ <canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>

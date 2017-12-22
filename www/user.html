@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>login Test</title>
+<script src="ajax.js"></script>
+ <script>
+  window.onload = function(){
+	  var regbtn = document.getElementById("register");
+	  var loginbtn = document.getElementById("login");
+	  var oTxtUser = document.getElementById("USER");
+	  var oTxtPass = document.getElementById("PASSWORD");
+	  
+	  
+	  loginbtn.onclick = function(){
+		  //console.log('hello ajax');
+		  ajax({//调用ajax.js里面的ajax(json)函数
+			url: '/user',
+            data: {act: 'login', user: oTxtUser.value, pass: oTxtPass.value},
+            type: 'get',
+            success: function (str){
+              var json=eval('('+str+')');
+
+              if(json.ok){
+                alert('登录成功');
+              }else{
+                alert('登录失败：'+json.msg);
+              }
+            },
+            error: function (){
+              alert('通信错误');
+            }
+		  });
+	  }
+	  
+	  
+	  regbtn.onclick = function(){
+		   ajax({//调用ajax.js里面的ajax(json)函数
+			url: '/user',
+            data: {act: 'reg', user: oTxtUser.value, pass: oTxtPass.value},
+            type: 'get',
+            success: function (str){
+              var json=eval('('+str+')');
+
+              if(json.ok){
+                alert('注册成功');
+              }else{
+                alert('注册失败：'+json.msg);
+              }
+            },
+            error: function (){
+              alert('通信错误');
+            }
+		  });
+	  }
+  }	
+ </script>
+</head>
+
+<body>
+ 用户:<input type="text" name="user" value="" id="USER"><br>
+ 密码:<input type="password" name="pass" value="" id="PASSWORD"><br>
+ <input type="button" value="注册" id="register">
+ <input type="button" value="登录" id="login">
+</body>
+</html>

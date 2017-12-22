@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularWeiBo</title>
+    <link href="../CSS/weibo.css" rel="stylesheet" type="text/css"/>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.controller('main',function($scope,$http){
+            $scope.arr=[];
+            $scope.pages_num=[];
+            //添加
+            $scope.addMeg=function(){
+                $http.get(`/page?act=add&content=${$scope.content}`).then(res=>{
+                    $scope.arr = res.data;
+                    $scope.content='';
+                    $scope.getPage(1);
+                },err=>{
+                    alert('error');
+                });
+            };
+            //获取页数
+            $scope.get_page_count = function(){
+                $http.get('/page?act=get_page_count').then(res=>{
+                    for(let i=1;i<=res.data;i++){
+                        $scope.pages_num.push(i);
+                    }
+                },err=>{
+                    alert('error_page');
+                });
+            };
+            $scope.get_page_count();
+            //获取页面数据
+             $scope.getPage= function(n){
+                 $scope.now =n;
+                $http.get(`/page?act=get&page=${n}`).then(res=>{
+                    $scope.arr = res.data;
+                },err=>{
+                    alert('error');
+                });
+            };
+            $scope.getPage(1);
+            //赞
+            $scope.acc = function(ID,nP){
+                $http.get(`/page?act=acc&ID=${ID}`).then(res=>{
+                    $scope.arr = res.data;
+                    $scope.getPage(nP);
+                },err=>{
+                    alert('error');
+                });
+            };
+            $scope.ref = function(ID,nP){
+                $http.get(`/page?act=ref&ID=${ID}`).then(res=>{
+                    $scope.arr = res.data;
+                    $scope.getPage(nP);
+                },err=>{
+                    alert("error");
+                });
+            };
+            $scope.del = function(ID,nP){
+                $http.get(`/page?act=del&ID=${ID}`).then(res=>{
+                    $scope.arr = res.data;
+                    $scope.getPage(nP);
+                },err=>{
+                    alert('error');
+                });
+            }
+        });
+    </script>
+</head>
+<body ng-controller="main">
+<div class="znsArea">
+    <!--留言-->
+    <div class="takeComment">
+        <textarea name="textarea" title="" class="takeTextField" ng-model="content"></textarea>
+        <div class="takeSbmComment">
+            <input type="button" class="inputs" value="" ng-click="addMeg()"/>
+            <span>(可按 Enter 回复)</span>
+        </div>
+    </div>
+    <!--已留-->
+    <div class="commentOn">
+        <div class="page">
+            <a ng-repeat="pages in pages_num" class="{{pages===now?'active':''}}" ng-click="getPage(pages)">{{pages}}</a>
+        </div>
+        <div class="messList" id="msg_box">
+            <div class="reply" ng-repeat="json in arr">
+                <p class="replyContent">{{json.content}}</p>
+                <p class="operation">
+                    <span class="replyTime">{{json.time|date:'yyyy年MM月dd日 HH:mm:ss a'}}</span>
+                    <span class="handle">
+                        <a class="top" ng-click="acc(json.ID,now)">{{json.acc}}</a>
+                        <a class="down_icon" ng-click="ref(json.ID,now)">{{json.ref}}</a>
+                        <a class="cut" ng-click="del(json.ID,now)">删除</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

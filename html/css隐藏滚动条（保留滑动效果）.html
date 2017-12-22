@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>结合"自动滚动文字栏"</title>
+<style>
+  #div1{
+	  border:1px solid red;
+      border-radius: 6px;
+	  width:200px;
+	  height:200px;
+	  overflow: hidden;
+	  background:url(../image/yangmi.jpg);
+	  background-size:cover;
+	  margin-bottom:2px;
+	  }
+ #div2{
+	 height: 100%;  
+	 width:220px;
+	 overflow-y: auto;  
+     overflow-x: hidden;  
+	 }
+  .pList{
+	  border:1px solid pink;
+	  border-radius:15px;
+	  margin:1px;
+	  text-align:center;
+	  }
+  #add,#delete{
+		margin-left:25px;
+		}
+</style>
+
+</head>
+
+<body>
+
+ <div id="div1">
+   <div id="div2">
+     
+   </div>
+ </div>
+ <input type="button" value="add" id="add" onClick="add()">
+ <input type="button" value="delete" id="delete" onClick="del()">
+<script>
+    let div2=document.getElementById("div2");
+    let i=1;
+   function add(){
+	  let p=document.createElement("p");
+	  p.className="pList";
+	  p.innerHTML="请叫我齐天大圣"+i;
+	  i++;
+	  div2.appendChild(p);
+	  }
+	function del(){
+		div2.removeChild(div2.lastChild);
+		i--;
+		}
+</script>
+</body>
+</html>

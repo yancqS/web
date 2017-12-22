@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>database应用</title>
+<style type="text/css">
+	table tr td{
+		padding:0px;
+		text-align: center;
+		color: #000;
+		height:20px;
+	}
+	table{
+		margin-bottom:10px;
+	}
+	div{
+		padding-left:120px;
+	}
+</style>
+<script>
+ window.onload=function(){
+	 //创建数据库
+	 var database=openDatabase("student","1.0","学生花名册","1024*1024",function(){});
+	 database.transaction(function(fx){
+		 //创建表
+		 fx.executeSql(
+			 "create table if not exists stu(name TEXT,sex TEXT,age TEXT,habbit TEXT)",
+			 [],
+			 function(){alert("table create success!");},
+			 function(){alert("table create fail!");}
+		 );
+	  });
+	 //获取对象
+	 var add=document.getElementsByName("add")[0];
+	 var del=document.getElementsByName("del")[0];
+	 var save=document.getElementsByName("save")[0];
+	 var tbody=document.getElementsByTagName("tbody")[0];
+	 var table=document.getElementsByTagName("table")[0];
+	 //添加行
+	 add.onclick=function(){
+		 var tr=document.createElement("tr");
+		 var tds="";
+		 for(var i=0;i<4;i++){
+			 tds+="<td></td>";
+			 //console.log(i);
+		 }
+		 //tr.appendChild(tds);(这么写是不对的，因为循环后的tds不是一个节点，无法添加)
+		 tr.innerHTML=tds;
+		 tbody.appendChild(tr);
+		 //console.log(tbody.childNodes.item(3).nodeName);
+		 //console.log(tbody.childNodes.length);
+	 }
+	 //删除行以及行内数据（在数据库中的数据）
+	 del.onclick=function(){
+		 if(tbody.childNodes.length>3){//这个判断是为了不删除表头
+			 tbody.removeChild(tbody.lastChild);
+			 database.transaction(function(fx){
+				 fx.executeSql("delete from stu where rowid=?",[tbody.getElementsByTagName("tr").length]);
+			 });
+		 }else{
+			 alert("已经删除完毕！！");
+		 }
+	 }
+	 //给表格添加可编辑属性
+	 table.ondblclick=function(e){
+		 var ev=e||window.event;//可解决兼容性问题
+		 var target=e.target||ev.srcElement;
+		 if(target.nodeName==="TD"){
+			target.contentEditable=true;
+		 }
+		 target.onblur=function(){
+			target.contentEditable=false;
+		 }
+	 }
+	 //将表格中数据保存到数据库
+	 save.onclick=function(){
+		 //console.log(tbody.getElementsByTagName("tr").length);
+		 for(var j=1;j<tbody.getElementsByTagName("tr").length;j++){
+			 var tdS=tbody.getElementsByTagName("tr")[j].getElementsByTagName("td");
+			 database.transaction(function(fx){
+			  fx.executeSql(
+			   "insert into stu(name,sex,age,habbit)values(?,?,?,?)",
+				[tdS[0].innerHTML,tdS[1].innerHTML,tdS[2].innerHTML,tdS[3].innerHTML],
+				function(){alert("data insert success!");},
+				function(){alert("data insert fail!");}
+			  );//executeSql()方法传递4个参数
+		  });
+        }		 
+	 }
+	 //将保存在数据库中的数据读取出来并放到表格中
+	 database.transaction(
+		 function(fx){
+		  fx.executeSql( 
+		  "select * from stu",
+		  [],
+		 function(fx,result){
+			 for(var k=0;k<result.rows.length;k++){
+				 var TR=document.createElement("tr");
+				 var str="";
+				 str+="<td>"+result.rows.item(k)['name']+"</td>"+"<td>"+result.rows.item(k)['sex']+"</td>"+"<td>"+result.rows.item(k)['age']+"</td>"+"<td>"+result.rows.item(k)['habbit']+"</td>";//注意这里的字符拼接
+				 TR.innerHTML=str;
+				 tbody.appendChild(TR);
+			 }
+		 },
+		 function(){
+			 alert("fail");
+		 });
+	 });
+ }	
+</script>
+</head>
+<body>
+ <table border="1px solid #000" cellpadding="10px" width="500px">
+ 	<tbody>
+        <tr>
+ 		 <th>姓名</th>
+ 		 <th>性别</th>
+ 		 <th>年龄</th>
+ 		 <th>爱好</th>
+ 		</tr>
+ 	</tbody>
+ </table>
+ <div>
+  <input type="button" value="增加一行" name="add">
+  <input type="button" value="删除一行" name="del">
+  <input type="button" value="保存数据" name="save">
+</div>
+</body>
+</html>

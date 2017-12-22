@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas5</title>
+<style type="text/css">
+	#canvas{
+		background:#ccc;
+	}	
+</style>
+</head>
+<script>
+	window.onload=function(){
+	 var canvas=document.getElementById("canvas");
+     var cobj=canvas.getContext("2d");
+     var btu=document.getElementById("btu");
+	 btu.onclick=function () {
+		 cobj.clearRect(0,0,500,500);
+	 }
+	 canvas.onclick=function(e){
+		 var ev=e||window.Event;
+		 var mx=ev.offsetX;
+		 var my=ev.offsetY;
+		 var angel=0;
+		 if(cobj.isPointInPath(mx,my)){//isPointInPath()方法判断s是否在路径之中，如果指定点在路径之中则返回true，否则返回false；
+			setInterval(function(){
+				cobj.clearRect(0,0,500,500);
+				cobj.beginPath();
+				angel+=0.1;
+				cobj.arc(200,200,100+50*Math.sin(angel),0,2*Math.PI,false);
+			    cobj.stroke();
+			},50)
+			
+		 }
+	 }
+	 canvas.onmousemove=function(e){
+		 var ev=e||window.Event;
+		 var mx=ev.offsetX;
+		 var my=ev.offsetY;
+		 var startX=200;
+		 var startY=450;
+		 var angel=Math.atan2((my-startY),(mx-startX));
+		 cobj.clearRect(0,350,500,500);
+		 cobj.beginPath();
+	     cobj.moveTo(startX,startY);
+		 cobj.lineTo(startX+100*Math.cos(angel),startY+50*Math.sin(angel));
+		 cobj.stroke();
+	 }
+     //cobj.moveTo(100,100);
+     //cobj.lineTo(130,100);
+     //cobj.arcTo(180,100,180,130,30);
+     //cobj.lineTo(180,180);
+     //cobj.stroke();	
+	 cobj.beginPath();
+	 cobj.arc(200,200,100,0,2*Math.PI,false);
+	 cobj.stroke();	
+	 cobj.beginPath();
+	 cobj.moveTo(200,450);
+	 cobj.lineTo(200,350);
+	 //cobj.stroke();
+	}
+</script>
+<body>
+ <canvas id="canvas" width="500" height="500"></canvas><br>
+ <button id="btu">清除画布</button>
+</body>
+</html>

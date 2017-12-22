@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.controller('main',function ($scope) {
+            $scope.childrenArray = [
+                {name:'kimi',age:3},
+                {name:'cindy',age:4},
+                {name:'anglar',age:4},
+                {name:'shitou',age:6},
+                {name:'tiantian',age:5}
+            ];
+        });
+        //自定义过滤器
+        app.filter('hidePM',function () {
+            return function (input,len=4) {
+                if(len>8 || len<0){
+                    len = 8;
+                    return input.substring(0, 3) + ''.padStart(len, '*') + input.substring(len + 3);
+                }else{
+                    return input.substring(0, 3) + ''.padStart(len, '*') + input.substring(len + 3);
+                }
+
+            }
+        });
+    </script>
+</head>
+<body ng-controller="main">
+ <div ng-init="arr=[{'title':'clothes','price':90},{'title':'nike','price':990},{'title':'addidas','price':790}]">
+     <ul>
+         <li ng-repeat="json in arr">
+             <h4>{{json.title}}</h4>
+             <span>{{json.price|currency}}</span>
+         </li>
+     </ul>
+ </div>
+ <div style="width: 80%; height:auto; border: 1px solid deeppink; box-shadow: 3px 3px 3px 2px;border-radius: 4px">
+     {{childrenArray|filter:"a"}}<br>
+     {{childrenArray|filter:4}}<br>
+     {{childrenArray|limitTo:2 }}<br>
+     {{childrenArray|orderBy:['age','name'] }}<br>
+     {{childrenArray|orderBy:'age' }}<br>
+     {{123456789033|number:2}}
+ </div>
+ <div ng-init="info=[{'name':'liming','tel':'17864295476'},{'name':'lixing','tel':'13864295486'},{'name':'zhangming','tel':'15864295496'},{'name':'Hengming','tel':'17667295486'}]">
+     <ul>
+         <li ng-repeat="item in info">
+             <h4>{{item.name}}</h4>
+             <span>{{item.tel | hidePM:6}}</span>
+         </li>
+     </ul>
+ </div>
+</body>
+</html>

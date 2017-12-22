@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--Angular 数据双向绑定内部原理 原生JS实现-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../JS/jquery-3.1.1.js" charset="utf-8"></script>
+    <script>
+    window.onload=function (){
+      let $scope={};/**相当于一个桥梁--数据=>$scope=>input  和 input=>$scope=>数据*/
+      let aEle=document.getElementsByTagName('*');//遍历页面所有节点
+      //数据->input
+      function apply(){
+        Array.from(aEle).forEach(ele=>{  /*Array.from(aEle)是为了把遍历来的节点放到一个数组,
+                                           然后再用forEach()来遍历各个节点**/
+          let model=ele.getAttribute('ng-model'); /*获取当前节点(ng-model)属性(如果有的话),如果没有该属性 则为 undefined*/
+          if(model){ /*判断当前节点是否有ng-model属性*/
+            if($scope[model]){ /*判断$scope这个json中是否有$scope[model](也就是$scope[a]、$scope[b])值*/
+              ele.value=$scope[model];//把在$scope中存放的数据给元素的值
+            }else{
+              ele.value='';
+            }
+          }
+        });
+      }
+      //input->数据
+      Array.from(aEle).forEach(ele=>{
+        let model=ele.getAttribute('ng-model');//在这个例子中model=a / b;因为ng-model这个HTTP标签属性只有 a 和 b.
+        if(model){
+          ele.oninput=function (){ //oninput事件 input select textarea 都可以触发该事件
+            $scope[model]=this.value;//当元素中输入值的时候,把输入的值放到$scope这个json中
+            apply();//调用apply()方法
+          };
+        }
+      });
+    };
+    </script>
+  </head>
+  <body>
+    <input title="" type="text" ng-model="a">
+    <input title="" type="text" ng-model="a">
+    <select title="" ng-model="a">
+      <option value="1">北京</option>
+      <option value="2">上海</option>
+      <option value="3">广州</option>
+      <option value="4">深圳</option>
+    </select>
+
+    <br>
+
+    <input title="" type="text" ng-model="b">
+    <select title="" ng-model="b">
+      <option value="1">北京</option>
+      <option value="2">上海</option>
+      <option value="3">广州</option>
+      <option value="4">深圳</option>
+    </select>
+  </body>
+</html>

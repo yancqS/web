@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	#canvas{
+		background:rgba(0,0,0,0);
+	}
+	#time{
+		font-size: 50px;
+		font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		color:#D7CA16;
+		padding-left: 150px; 
+	}
+	#poem{
+		position: absolute;
+		top:10px;
+		left:600px;
+		width:550px;
+		height:650px;
+		color:#789B5C;
+		line-height: 1.5;
+		font-family: "华文行楷";
+		font-size:35px;
+		background: rgba(0,0,0,0.3);
+		border-radius: 10px;
+		cursor:pointer;
+	}
+</style>
+<title>clockofCanvas</title>
+<script>
+window.onload = function(){
+ var canvas = document.getElementById("canvas");
+ var cobj = canvas.getContext("2d");
+ var ptime = document.getElementById("time");
+ var audio = document.getElementById("audio");
+ var pdiv = document.getElementById("poem");
+ var body = document.getElementById("body");
+ var startx = 250;
+ var starty = 250;
+ var radius = 100;
+//音乐播放/暂停
+ poem.onmouseover = function(){
+	 audio.play();
+ }
+ poem.onmouseleave = function(){
+	 audio.pause();
+ }
+setInterval(function(){
+ var data = new Date();
+ var second = data.getSeconds();
+ var minute = data.getMinutes();
+ var hour = data.getHours();
+  //显示时间
+ ptime.innerHTML = hour+"时"+minute+"分"+second+"秒";
+  //阴影
+ cobj.shadowColor = "#888";
+ cobj.shadowOffsetX = 0;
+ cobj.shadowOffsetY = 0;
+ cobj.shadowBlur = 3;	
+ //渐变色
+ var colorObj = cobj.createRadialGradient(startx,starty,1,startx,starty,100);
+ var j = 0;//表的刻度数字
+ colorObj.addColorStop(0,"#efefef");
+ colorObj.addColorStop(1,"#cecece");
+ cobj.lineWidth = 8;
+ cobj.strokeStyle = colorObj;
+ cobj.fillStyle = colorObj;
+ cobj.beginPath();
+ cobj.arc(startx,starty,100,0,2*Math.PI,false);
+ cobj.stroke();
+ cobj.fill();
+    //画刻度
+	for(var i = 0;i < 60;i++){
+	 var radius0 = radius-5;
+	 var angels = 6*i*Math.PI/180;
+	 var lw = 2 ;
+	 cobj.font = "bold 14px Arial";
+	 cobj.textAlign = "center";
+	 cobj.textBaseline = "middle";
+		if(i%5===0){
+			lw = 4;
+		    radius0 = radius-8;
+			j++;
+			cobj.fillStyle = "#000";
+			cobj.fillText(j,startx+(radius0-8)*Math.cos(angels-45),starty+(radius0-8)*Math.sin(angels-45));
+		}
+	 cobj.strokeStyle = "#000";
+     cobj.lineWidth = lw;
+     cobj.beginPath();
+     cobj.moveTo(startx+radius*Math.cos(angels),starty+radius*Math.sin(angels));
+     cobj.lineTo(startx+radius0*Math.cos(angels),starty+radius0*Math.sin(angels));
+     cobj.stroke();
+	}
+    //画表盘中心
+	cobj.beginPath();
+	cobj.arc(startx,starty,5,0,2*Math.PI,false);
+	cobj.fillStyle = "#000";
+	cobj.fill();
+	//画表针
+	var sa = second*6+90;
+	var ma = minute*6+90+second*6/60;
+	var ha = hour*30+90+minute*6/12;
+	drawpoint(75,2,"blue",sa);//秒针
+	drawpoint(65,3,"red",ma);//分针
+	drawpoint(50,4,"pink",ha);//时针
+	//画表针的函数
+	function drawpoint (length,lw1,color,angel){
+	   cobj.beginPath();
+	   cobj.moveTo(startx,starty);
+	   cobj.strokeStyle=color;
+	   cobj.lineTo(startx-length*Math.cos(angel*Math.PI/180),starty-length*Math.sin(angel*Math.PI/180));
+	   cobj.lineWidth = lw1;
+	   cobj.stroke();
+	}
+	},1000)
+  var n = 1;
+	//改变背景的函数
+  setInterval(function(){
+	  n++;
+	  if(n>4){
+		  n=1;
+	  }
+  body.style.backgroundImage = "url(../image/"+n+".jpg)";//注意：像这样style.backgroundImage之类的，其css样式应该是内联式：如<body style="background-image: url(../image/1.jpg);background-size: cover" id="body"><body>
+  },5000);
+}
+</script>
+</head>
+<body style="background-image: url(../image/1.jpg);background-size: cover" id="body">
+ <canvas id="canvas" width="500" height="500">您的浏览器不支持canvas</canvas>
+ <p id="time"></p>
+ <div id="poem">时光如水，一任芳华流逝。曾经的美丽，曾经的绚烂，曾经的伟大;转眼如烟似梦，轻淡宛若飞烟散，茫茫然一切美好 如梦如烟，轻轻飘散，那一场旧事轻弹吟弦。低眸无语间，有彩蝶舞翩翩，寻旧梦，舞人间，双飞双宿在花间。人间一度似神仙，蝶舞梦飞远。千年修行今世缘，梦续尘缘。旧时光牵今世流年花事牵，舞尘缘，续旧梦，转眼香魂一缕飘散，终不悔，流芳百世墨醇芳。
+ </div>
+　<audio id="audio" src="../video/wheretimego.mp3"></audio>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<!--canvas是通过Javascript来画图的-->
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	canvas{
+		background:#ccc;
+	}	
+	#con{
+		display:none;
+	}
+</style>
+<title>canvas(1)</title>
+<script type="application/javascript">
+ window.onload=function(){
+	 var canvas=document.getElementById("canvas");
+	 var cobj=canvas.getContext("2d");//获取画图环境
+	 //var colorobj=cobj.createLinearGradient(0,0,200,0);//线性渐变(x1,y1,x2.y2)
+	 //var colorobj=cobj.createRadialGradient(100,100,20,100,100,100);//放射渐变(cx1,cy1,R,cx2,cy2.R)
+	 //console.log(colorobj);
+	 var imgobj=cobj.createPattern(document.getElementById("img"),"repeat");
+	 //colorobj.addColorStop(0,"red");
+	 //colorobj.addColorStop(0.5,"blue");
+	 //colorobj.addColorStop(1,"green");
+	 cobj.fillStyle=imgobj;//注:fillStyle一定要在fillRect上方(strokeStyle也是)
+	 cobj.shadowColor="#000";
+	 cobj.shadowOffsetX=3;
+	 cobj.shadowOffsetY=3;
+	 cobj.shadowBlur=5;
+	 cobj.fillRect(0,0,200,200);
+	 //cobj.strokeStyle="blue";
+	 //cobj.strokeRect(200,200,200,200);
+ } 
+</script>
+</head>
+<body>
+<canvas width="400" height="400" id="canvas">您的浏览器不支持canvas标签</canvas>
+<div id="con">
+  <img src="../image/exit.png" id="img">
+</div>
+</body>
+</html>

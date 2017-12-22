@@ -1,0 +1,135 @@
+<!--
+3种创建自定义服务的方式:
+    1.Factory
+    2.Service(本例)
+    3.Provider
+-->
+
+<!--Factory方法-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angularCusService</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.factory('myFactory',function($http, $q){
+            let service = {};
+            service.name = "yancq";
+            service.getData = function(){
+                let d = $q.defer();
+                $http.get('../www/data.txt').then(res=>{
+                    d.resolve(res.data);
+                },err=>{
+                    d.reject(err);
+                });
+                return d.promise;
+            };
+            return service;
+        });
+        app.controller('main', function($scope, myFactory){
+            $scope.name = myFactory.name;
+            myFactory.getData().then(function(res){
+                alert(res);
+            },function(){
+                alert("error");
+            });
+        });
+    </script>
+</head>
+<body ng-controller="main">
+<div>{{name}}</div>
+</body>
+
+<!--Service方法-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angularCusService</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.service('myService', function($http, $q){
+            this.name = 'service';
+            this.muFun = function (x) {
+                return x.toString(16);
+            };
+            this.getData = function () {
+                let d = $q.defer();//创建deffered对象
+                $http.get('../www/data.txt').then(res=>{
+                    d.resolve(res.data);
+                },err=>{
+                    d.reject(err);
+                });
+                return d.promise;
+            }
+        });
+        app.controller('main', function($scope, myService){
+            $scope.result = myService.muFun(255);
+            myService.getData().then(function(response){
+                alert(response);
+            }, function(){
+                alert('error');
+            });
+        });
+    </script>
+</head>
+<body ng-app="app" ng-controller="main">
+<div>{{result}}</div>
+</body>
+</html>
+
+<!--Provider方法-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angularCusService</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.config(function(myProviderProvider){
+            myProviderProvider.setName('ycq');
+        });
+        app.provider('myProvider',function(){
+            let name = '';
+            let test = {"a":17,"b":2};
+            this.setName = function(newName){
+                name = newName;
+            };
+            this.$get = function($http, $q){
+                return {
+                    getData : function(){
+                        let d = $q.defer();
+                        $http.get('../www/data.txt').then(res=>{
+                            d.resolve(res.data);
+                        },err=>{
+                            d.reject(err);
+                        });
+                        return d.promise;
+                    },
+                    lastName : name,
+                    test : test
+                }
+            }
+        });
+        app.controller('main', function ($scope, myProvider) {
+            $scope.name = myProvider.lastName;
+            $scope.test = myProvider.test.a;
+            myProvider.getData().then(function(res){
+                alert(res);
+            },function(){
+                alert('error');
+            });
+        })
+    </script>
+</head>
+<body ng-controller="main">
+    <div>
+        {{name}}
+        {{test}}
+    </div>
+</body>
+</html>

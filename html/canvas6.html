@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas6</title>
+<style>
+	#canvas{
+		background:#eee;
+	}	
+</style>
+<script>
+  window.onload=function(){
+	  var canvas=document.getElementById("canvas");
+      var cobj=canvas.getContext("2d");
+	  var le=document.getElementById("left");
+	  var to=document.getElementById("top");
+	  var left=le.innerHTML;
+	  var top=to.innerHTML;
+	  cobj.rect(100,100,50,80);
+	  cobj.stroke();
+	  document.onkeydown=function(e){
+		  var ev=e||window.Event;
+		  if(ev.keyCode===37){
+			  (function(){
+			  left--;
+			  cobj.clearRect(0,0,500,500);
+			  cobj.beginPath();
+				  if(left<=0){
+					  left=1;
+					  alert("已到天涯海角，何必苦苦相逼");
+				  }
+			  cobj.rect(left,top,50,80);
+			  cobj.stroke();
+			  le.innerHTML=left;
+			  })();
+		  }
+		  if(ev.keyCode===39){
+			  (function(){
+			  left++;
+			  cobj.clearRect(0,0,500,500);
+			  cobj.beginPath();
+				  if(left===450){
+					  left=449;
+					  alert("已到天涯海角，何必苦苦相逼");
+				  }
+			  cobj.rect(left,top,50,80);
+			  cobj.stroke();
+			  le.innerHTML=left;
+			  })();
+		  }
+		  if(ev.keyCode===38){
+			 (function(){
+			  top--;
+			  cobj.clearRect(0,0,500,500);
+			  cobj.beginPath();
+				  if(top<=0){
+					  top=1;
+					  alert("已到天涯海角，何必苦苦相逼");
+				  }
+			  cobj.rect(left,top,50,80);
+			  cobj.stroke();
+			  to.innerHTML=top;
+			  })();
+		  }
+		  if(ev.keyCode===40){
+			  (function(){
+			  top++;
+			  cobj.clearRect(0,0,500,500);
+			  cobj.beginPath();
+				  if(top===420){
+					  top=419;
+					  alert("已到天涯海角，何必苦苦相逼"); 
+				  }
+			  cobj.rect(left,top,50,80);
+			  cobj.stroke();
+			  to.innerHTML=top;
+			  })();
+		  }
+		  if(ev.keyCode===13){
+			  (function(){
+			    cobj.beginPath();
+				cobj.rect((left+25),0,10,10);
+				cobj.fillStyle="rgba(255,0,0,0.5)";             
+			    cobj.fill();
+				alert("fire");
+			  })();
+		  }
+	  }
+  }	
+</script>
+</head>
+<body>
+<p style="text-align: center;font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';font-size: 30px">Tank Game</p>
+ <canvas id="canvas" width="500" height="500"></canvas>
+ <div style="display: none">
+  <p id="left">100</p>
+  <p id="top">100</p>
+ </div>
+</body>
+</html>

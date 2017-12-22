@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angularDirective</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background: #ccc;
+        }
+    </style>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.controller('main', function ($scope, $sce) {
+            $scope.info = $sce.trustAsHtml('My name is <strong>yancq</strong>');
+        })
+    </script>
+</head>
+<body ng-init="a=true;b ='../image/yangmi.jpg'" ng-controller="main">
+ <div ng-bind-html="info"></div>
+ <input type="button" value="show/hide" ng-click="a=!a">
+ <div class="box" ng-show="a"></div>
+ <img ng-src="{{b}}">
+ <div ng-init="s={width:'200px',height:'200px',background:'red'};m='width:200px;height:200px;background:green;'">
+     <div style="width:200px;height:200px;background: blue;"></div>
+     <div style="{{m}}"></div>
+     <div ng-style="s"></div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--
+1.首先是所有的compile函数按嵌套关系先序遍历运行。然后是pre-link函数pre-link函数之间的先后顺序仍按照先序遍历，
+但是当一个已经运行过pre-link元素的所有子元素都运行了pre-link函数时，会马上运行它的post-link函数，同时有
+多个这样的元素时，先运行pre-link的后运行post-link。
+
+2.这样的好处在于，post-link函数运行时，它的所有子元素肯定都已经运行过了pre-link,post-link，
+以及compile函数，所以一般我们的业务逻辑写在post-link中。
+
+3.另外，注意到了tElem的Html内容是不包含任何指令的，它只是一个模板，而iElem则是一个实例，
+它包含所有的指令以及作用域，这也是为什么增删节点在compile中进行更安全的原因。　
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>CustomDirectiveCompile</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module("myApp",[]);
+        function createDirective(name) {
+            return function() {
+                return {
+                    restrict:"E",
+                    compile:function(tElem,tArrs) {
+                        console.log(name + ': compile => ' + tElem.html());
+                        return {
+                            pre:function (scope,iElem,iAttrs) {
+                                console.log(name + ': pre-link => ' + iElem.html());
+                            },
+                            post:function(scope,iElem,iAttrs) {
+                                console.log(name + ': post-link => ' + iElem.html());
+                            }
+                        }
+                    }
+                };
+            }
+        }
+        app.controller('myController',function($scope) {
+            $scope.name="World";
+        });
+        app.directive('first',createDirective('first'));
+        app.directive('second',createDirective('second'));
+        app.directive('third',createDirective('third'));
+        app.directive('fourth',createDirective('fourth'));
+        app.directive('fifth',createDirective('fifth'));
+    </script>
+</head>
+<body ng-controller="myController">
+<first>
+    <second>
+        <fourth>
+            Hello {{name}}
+        </fourth>
+    </second>
+    <third>
+        <fifth>
+            Helloo {{name}}
+        </fifth>
+    </third>
+</first>
+</body>
+</html>

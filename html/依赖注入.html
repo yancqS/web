@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    let providers={ //模拟angularJS库中存放依赖($scope $http $sce $interval)的地方
+      '$scope': 12,
+      '$http': 5,
+      '$interval': 88
+    };
+
+    function show($scope, $interval, $http){  // 依赖注入(由函数决定自己的参数)
+      console.log(arguments);
+    }
+    //angular内部
+    //其实就是一步步得到函数所要的参数(利用字符串的分割 替换 去空格)
+      let str=show.toString();//把整个函数输出成一大段字符串
+      //console.log(typeof str);
+      str1=str.split('{')[0];//根据 { 分割字符串=>[,] 并且要的数组中的第一个元素:'function show($scope, $interval, $http)'
+      str2=str1.split('(')[1].replace(')', '');/**对str1这个字符串根据 ( 分割=>[,]
+      并且要的数组中的第二个元素得到:'$scope, $interval, $http)' 然后用空白代替 ) 得到:'$scope, $interval, $http'*/
+      let args=str2.split(',').map(s=>s.trim());/**对str2这个字符串根据 , 进行分割=>[,,]
+      然后遍历这个数组，并且数组中每个字符串都进行去空格(去起始和结尾处的空格)处理:['$scope', '$interval', '$http']*/
+      //console.log(args);
+
+      let values=[];//建立一空数组
+      for(let i=0;i<args.length;i++){
+        values.push(providers[args[i]]);/*遍历一下args这个数组,把providers[args[i]]的值取出来放进values数组中
+        args[i]:'$scope' '$interval' '$http'**/
+      }
+      //alert(values);
+      show.apply(null, values);//把values数组中的元素当作参数传给show函数
+      /**
+       * 具体见:C:\Users\Ycq\Desktop\all\sum\手册\apply方法.docx`
+       * 值的一提的是apply()方法:Math.max.apply(null,Array)
+       * Math.max()方法是不接受数组作为参数的,这个时候通过apply()方法就可以实现把数组=>参数列表传给Math.max().
+       * */
+    </script>
+  </head>
+  <body></body>
+</html>

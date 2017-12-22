@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas2</title>
+<style type="text/css">
+	canvas{
+		background:#ccc;
+	}	
+</style>
+</head>
+<script type="text/javascript">
+	window.onload=function(){
+	 var canvas=document.getElementById("canvas");
+     var cobj=canvas.getContext("2d");
+	 cobj.fillStyle="rgba(0,0,0,0.5)";
+     cobj.rect(0,0,100,200);
+     cobj.fill();
+	//cobj.fill();
+		cobj.beginPath();
+		cobj.moveTo(0,0);
+		cobj.lineTo(200,200);
+		cobj.lineTo(200,100);
+		cobj.closePath();
+		cobj.stroke();
+		cobj.beginPath();
+		cobj.moveTo(200,30);
+		cobj.lineTo(300,50);
+		cobj.lineTo(500,300);
+		cobj.closePath();
+		cobj.stroke();
+	//画布程序	
+	 canvas.onmousedown=function(e){
+		 var ev=e||window.event;
+		 var mx=ev.layerX;
+		 var my=ev.layerY;
+		 //console.log(mx+","+my);
+		 cobj.moveTo(mx,my);
+		 canvas.onmousemove=function(e){
+			 var ev=e||window.event;
+			 var endx=ev.layerX;
+		     var endy=ev.layerY;
+			 cobj.lineTo(endx,endy);
+			 cobj.strokeStyle="#ff0000";
+			 cobj.stroke();
+		 }
+		 canvas.onmouseup=function(){
+			 canvas.onmousemove=null;
+			 canvas.onmouseup=null;
+		 }
+	 }
+	}
+</script>
+<body>
+  <canvas id="canvas" width="500" height="500">您的浏览器不支持画图</canvas>
+</body>
+</html>

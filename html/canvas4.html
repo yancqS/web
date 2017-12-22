@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas4</title>
+<style type="text/css">
+	#canvas{
+		background:#ccc;
+		cursor: pointer;
+	}	
+</style>
+</head>
+<!--绘制二阶贝塞尔曲线-->
+<script>
+ window.onload=function(){
+	 var canvas=document.getElementById("canvas");
+	 var cobj=canvas.getContext("2d");
+	 var info=document.getElementById("info");
+	 var control=document.getElementById("control");
+	 canvas.onmousedown=function(e){
+		 var ev=e||window.Event;
+		 var startx=ev.offsetX;
+		 var starty=ev.offsetY;
+		 info.innerHTML="start point is("+startx+","+starty+")";
+	 canvas.onmouseup=function(e){
+		var ev=e||window.Event;
+		var endx=ev.offsetX;
+		var endy=ev.offsetY;
+		info.innerHTML+="<br/>end point is("+endx+","+endy+")";
+	 canvas.onmousemove=function(e){
+		   var ev=e||window.Event;
+		   var controlx=ev.offsetX;
+		   var controly=ev.offsetY;
+		   cobj.clearRect(0,0,500,500);
+		   cobj.beginPath();
+		   control.innerHTML="control point is("+controlx+","+controly+")";
+		   cobj.moveTo(startx,starty);
+		   cobj.quadraticCurveTo(controlx,controly,endx,endy);
+		   cobj.stroke();
+		}
+	 }
+	 }
+ }	
+</script>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+<p id="info">start point is</p>
+<p id="control">control point is</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <!--
+    指令:ng-app ng-controller ng-init ng-repeat
+    依赖:$http get请求 $scope
+    -->
+    <meta charset="UTF-8">
+    <title>angularTest</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.controller('control',function($scope,$http){
+            $http.get('../www/data.txt').then((res)=>{
+                console.log(res);
+                $scope.arr=res.data;
+            },(err)=>{
+                alert('error');
+            });
+        });
+    </script>
+</head>
+<body>
+ <div ng-controller="control">
+     <ul>
+         <li ng-repeat="Num in arr">{{Num}}</li>
+     </ul>
+ </div>
+</body>
+</html>
+

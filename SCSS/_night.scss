@@ -1,0 +1,8 @@
+$width:300px;
+$color:#eee;
+nav{
+  a,span{
+    color: $color;
+  }
+  width:$width;
+}

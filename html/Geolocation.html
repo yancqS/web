@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>地理位置Geolocation</title>
+<style type="text/css">
+	#map{
+		width:1000px;
+		height:800px;
+	}
+	#result{
+		width:1000px;
+		height:100px;
+		position: absolute;
+		left:400px;
+		margin-top:10px;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=9RHg0Gi07gye5cpT00nv79q4PLrPWPyF"></script>
+ <script type="text/javascript">
+  function success(position){
+	var la=position.coords.latitude; //纬度
+	var lo=position.coords.longitude;//经度
+	var map = new BMap.Map("map");   // 创建Map实例
+	map.centerAndZoom(new BMap.Point(lo, la), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+   }
+  function error(errorCode){
+	   alert(errorCode.code+'--'+errorCode.message);
+   }
+  var options={};
+   //判断浏览器是否支持navigator.geolocation属性
+   if(window.navigator.geolocation){
+	   window.navigator.geolocation.getCurrentPosition(success,error,options);
+   }else{
+	   alert("浏览器不支持geolocation");
+   }
+
+</script>
+<div id="map"></div>
+</body>
+</html>

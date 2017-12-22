@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>localStorage</title>
+<style type="text/css">
+	input{
+		line-height:1.5;
+	}	
+</style>
+<script type="text/javascript">
+ window.onload=function(){
+	 let names=document.getElementsByName("names")[0];
+	 let pass=document.getElementsByName("pass")[0];
+	 let save=document.getElementsByName("save")[0];
+	 if(localStorage.getItem("names")&&localStorage.getItem("pass")){
+		 names.value=localStorage.getItem("names");
+		 pass.value=localStorage.getItem("pass");
+		 save.checked=true;
+	 }
+	 save.onclick=function(){
+		if(save.checked){
+			localStorage.setItem("names",names.value);
+			localStorage.setItem("pass",pass.value);
+		}else{
+			localStorage.removeItem("names");
+			localStorage.removeItem("pass");
+		}
+	 }
+ }
+</script>
+</head>
+
+<body>
+ 姓名：<input title="" type="text" name="names"><br/>
+ 密码：<input title="" type="password" name="pass"><br/>
+	<label for="check">自动登录</label>
+	<input type="checkbox" name="save" id="check">
+</body>
+</html>

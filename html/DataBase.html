@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DataBase</title>
+</head>
+<body>
+<div id="one"></div>
+ <script>
+   window.onload=function(){
+	   var one=document.getElementById("one");
+	   if(window.openDatabase){
+		   //打开或创建一个数据库
+		  var dataBase = openDatabase("staff", "1.0", "学生表", 1024*1024, function(){});
+		   //alert(dataBase);
+		   //console.log(dataBase);
+		   //console.log(typeof(dataBase));
+		  dataBase.transaction(function(fx){
+			 //console.log(fx);
+			 //console.log(typeof(fx));
+		     //alert(fx);
+			  //创建一个表
+		     fx.executeSql(
+		     "create table if not exists substaff(id REAL UNIQUE,name TEXT)",
+		     [],
+		     function  () {
+		       alert("表创建成功");
+		     },
+		     function  (error) {
+		       alert("创建表失败");
+		     });
+			
+			  
+			  //插入数据
+             fx.executeSql(
+		     "insert into substaff(id,name)values(?,?)",
+		     [1,"张三"],
+		     function  () {
+		       alert("数据插入成功");
+		     },
+		     function  () {
+		       alert("数据插入失败");
+		     });
+			
+			  
+			  //更新数据
+			  fx.executeSql(
+			  "update substaff set name=? where id=?",
+			  ["李四",1],
+			  function(){
+				alert("数据更新成功");
+			  },
+			  function(){
+				alert("数据更新失败");
+			  });
+			  
+			  
+			  //查询数据
+		     fx.executeSql(
+		     "select * from substaff",
+		     [],
+		     function(fx,result){
+			 console.log(result);
+             console.log(typeof(result));
+             console.log(result.rows);
+             console.log(typeof(result.rows));	 
+		     for (var i=0; i<result.rows.length; i++) {
+		       one.innerHTML+=result.rows.item (i)["name"];
+		     }
+		      alert("数据查询成功");
+		     },
+		     function(fx,result){
+		      alert("数据查询失败");
+		     });
+			 
+			  
+			  //删除数据
+			  fx.executeSql(
+			   "delete from substaff where id=?",
+			   [1],
+			   function(){
+				  alert("delete success");
+			  },
+			   function(){
+				  alert("delete fail");
+			  });
+		     
+			  
+			  //删除表
+			  fx.executeSql(
+		      "drop table substaff",
+		      [],
+		      function(){
+		        alert("表删除成功");
+		      },
+		      function(){
+		        alert("表删除失败");
+		     });
+		  });
+	   }
+   }
+ </script>
+</body>
+</html>

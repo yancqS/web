@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-init="b=5">
+<head>
+    <!--
+     指令:ng-app ng-controller ng-init ng-repeat
+     依赖:$scope
+    -->
+    <meta charset="UTF-8">
+    <title>angularTest</title>
+    <style type="text/css">
+        div{
+            float: left;
+            margin-right: 15px;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: #2b2b2b;
+            color: #fff;
+        }
+    </style>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);//模块
+        app.controller('control',function($scope){
+            //alert($scope.b);
+            $scope.num1 = 0;
+            $scope.num2 = 0;
+            $scope.parseInt=function(str){
+                return parseFloat(str);
+            };
+            $scope.arr=[12,5,8];
+        });
+    </script>
+</head>
+<body>
+ <div ng-controller="control">
+     <input type="text" title="" ng-model="num1">
+     <input type="text" title="" ng-model="num2">
+     <span>{{parseInt(num1)+parseInt(num2)}}</span>
+ </div>
+ <div ng-init="arr=[{name:'yan',con:'hello everyone'}]">
+     user:<input type="text" title=""  ng-model="name"/><br/>
+     <textarea ng-model="con" cols="30" title="留言" rows="10"></textarea>
+     <input type="button" title="" value="留言" ng-click="arr.unshift({name:name,con:con})"/>
+     <ul>
+         <li ng-repeat="json in arr">
+             <h4>{{json.name}}</h4>
+             <p>{{json.con}}</p>
+         </li>
+     </ul>
+ </div>
+ <div ng-init="count=0" ng-mouseenter="count=count+1" id="box">
+     {{count}}
+ </div>
+ <div ng-controller="control">
+     <ul>
+         <li ng-repeat="data in arr">{{data}}</li>
+     </ul>
+ </div>
+</body>
+</html>
+
+
+

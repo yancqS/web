@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自定义视频播放器</title>
+<style>
+ #box{
+   width:600px;
+   height:40px;
+   background:#ff0000;
+   border-radius:10px;
+   box-shadow:1px 1px 2px 2px #111111;
+	 }
+ .play{
+	width:0;height:0;
+	border-left:16px solid #fff;
+	border-bottom:12px solid rgba(255,255,255,0);
+	border-top:12px solid rgba(255,255,255,0);
+	float:left;
+	margin-top:8px;
+	margin-left:10px;
+	cursor:pointer; 
+	 }
+ .pause{
+	width:5px;height:20px;
+	border-left:6px solid #fff;
+	border-right:6px solid #fff;
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	cursor:pointer; 
+	 }
+  #progress{
+	width:60%;height:6px;
+	float:left;
+	border-radius:4px;
+	box-shadow:1px 1px 2px 2px #111111;
+	background:#fff; 
+	margin-top:18px;
+	margin-left:10px; 
+	position:relative;
+	 }
+  #bar{
+	 width:0;height:100%;
+	 border-radius:4px;
+	 background:#ccc; 
+	 display:inline-block;
+	 position:absolute;
+	 top:0;left:0;
+	  }
+  #control{
+	 width:15px;height:15px;
+	 background:#0F6;
+	 border-radius:50%; 
+	 box-shadow:1px 1px 2px 2px #111111;
+	 position:absolute;
+	 top:-5px;left:0;
+	 cursor:pointer;
+	  }
+  .sound-on{
+	 float:left;
+	 width:0;height:10px;
+	 border-right:13px solid #fff;
+	 border-bottom:12px solid rgba(255,255,255,0);
+	 border-top:12px solid rgba(255,255,255,0);
+	 margin-top:5px;
+	 margin-left:5px;
+	 }
+  .sound-off{
+	 float:left;
+	 width:0;height:10px;
+	 border-right:13px solid #000;
+	 border-bottom:12px solid rgba(255,255,255,0);
+	 border-top:12px solid rgba(255,255,255,0);
+	 margin-top:5px;
+	 margin-left:5px;
+	 }
+  #volumeprogress{
+	width:20%;height:6px;
+	float:left;
+	border-radius:4px;
+	box-shadow:1px 1px 2px 2px #111111;
+	background:#fff; 
+	margin-top:18px;
+	margin-left:3px; 
+	position:relative;
+	 }
+  #volumebar{
+	 width:100%;height:100%;
+	 border-radius:4px;
+	 background:#6C0; 
+	 display:inline-block;
+	 position:absolute;
+	 top:0;left:0;
+	  }
+  #volumecontrol{
+	 width:15px;height:15px;
+	 background:#0F6;
+	 border-radius:50%; 
+	 box-shadow:1px 1px 2px 2px #111111;
+	 position:absolute;
+	 top:-5px;left:120px;
+	 cursor:pointer;
+	  }
+  #full{
+	 width:32px;height:32px;
+	 float:left; 
+	 margin-top:4px;
+	 margin-left:15px;
+	 cursor:pointer;
+	  }
+</style>
+</head>
+<body>
+<div id="all">
+ <video src="../video/nTaMi2329-mobile.mp4" poster="../image/bz.jpg" id="video" width="600px" height="500px">浏览器不支持视频标签</video>
+ <!--放置控件的盒子-->
+ <div id="box">
+  <!--播放暂停控制-->
+  <div id="play" class="play"></div>
+  <!--进度条-->
+  <div id="progress">
+   <span id="bar"></span>
+   <div id="control"></div>
+  </div>
+  <!--音量控制-->
+  <div id="volume" class="sound-on"></div>
+  <!--音量控制条-->
+  <div id="volumeprogress">
+   <span id="volumebar"></span>
+   <div id="volumecontrol"></div>
+  </div>
+  <!--全屏控制-->
+  <div id="full">
+   <img src="../image/fullscreen.png" id="img"/>
+  </div>
+ </div>
+</div>
+ <script type="text/javascript">
+ window.onload=function(){
+   //盒子对象
+   let box=document.getElementById("box");
+  //视频对象	 
+  let video=document.getElementById("video");
+  //播放按钮
+  let play=document.getElementById("play");
+  //音量按钮
+  let volume=document.getElementById("volume");
+  //全屏按钮
+  let full=document.getElementById("full");
+  //全屏图标
+  let img=document.getElementById("img");
+  //进度条
+  let progress=document.getElementById("progress");
+  //灰色内部进度条
+  let bar=document.getElementById("bar");
+  //进度条的可拖动控制块
+  let control=document.getElementById("control");
+  //音量进度条
+  let volumeprogress=document.getElementById("volumeprogress");
+  //音量内部进度条
+  let volumebar=document.getElementById("volumebar");
+  //音量控制块
+  let volumecontrol=document.getElementById("volumecontrol");
+  //播放暂停控制
+  play.onclick=function(){
+	  if(video.paused){
+		  play.className="pause";
+		  video.play();
+		  }else{
+			  play.className="play";
+			  video.pause();
+			  }
+	  };
+   //进度条控制
+  video.addEventListener("timeupdate",function(){
+	  let scale=video.currentTime/video.duration;
+	  bar.style.width=scale*100+"%";
+	  control.style.left=progress.offsetWidth*scale+"px";
+	  },false);
+   //进度条拖拽
+    control.onmousedown=function(e){
+	  document.onmousemove=function(e){
+		  let leftvalue=e.clientX-progress.offsetLeft-box.offsetLeft;
+		  if(leftvalue<=0){
+			  leftvalue=0;
+			  }
+		  if(leftvalue>progress.offsetWidth){
+			  leftvalue=progress.offsetWidth;
+			  }
+		  control.style.left=leftvalue+"px";
+		  let scaleL=leftvalue/progress.offsetWidth;
+		  video.currentTime=video.duration*scaleL;
+		  };
+	  document.onmouseup=function(){
+		  document.onmousemove=null;
+		  document.onmouseup=null;
+		  }
+	};
+  //进度条点击
+  progress.onclick=function(e){
+	  let leftclickvalue=e.clientX-progress.offsetLeft-box.offsetLeft;
+	  control.style.left=leftclickvalue+"px";
+	  let scaleLC=leftclickvalue/progress.offsetWidth;
+	  video.currentTime=video.duration*scaleLC;
+	};
+  //音量控制
+  volume.onclick=function(){
+	  if(video.muted || video.volume===0){
+	     volume.className="sound-on";
+		 video.volume=0.5;
+		 volumecontrol.style.left=volumeprogress.offsetWidth/2+"px";
+	   }else{
+		 volume.className="sound-off";  
+		 video.volume=0;
+		 volumecontrol.style.left=0;
+		 }
+	  };
+	//音量拖动条
+	video.addEventListener("volumechange",function(){
+	  let controlsite=volumecontrol.style.left;
+	  let volumescale=parseInt(controlsite)/volumeprogress.offsetWidth;
+	  volumebar.style.width=volumescale*100+"%";
+	  },false);
+   //音量拖动条控制
+   volumecontrol.onmousedown=function(e){
+	  document.onmousemove=function(e){
+		  let volumeleftvalue=e.clientX-volumeprogress.offsetLeft-box.offsetLeft;
+		  if(volumeleftvalue<=0){
+			  volumeleftvalue=0;
+			  }
+		  if(volumeleftvalue>=volumeprogress.offsetWidth){
+			  volumeleftvalue=volumeprogress.offsetWidth;
+			  }
+		  volumecontrol.style.left=volumeleftvalue+"px";
+          video.volume=volumeleftvalue / volumeprogress.offsetWidth;
+		  };
+	  document.onmouseup=function(){
+		  document.onmousemove=null;
+		  document.onmouseup=null;//释放内存
+		  }
+	};
+   
+  //全屏控制
+  img.addEventListener("click",function(){
+	  if(img.src==="http://localhost:8888/YanProject/image/fullscreen.png"){
+	   img.src="../image/fullscreen_exit.png";
+	   //解决moz内核与webkit内核兼容性问题
+	   if(video.mozRequestFullScreen){
+		   video.mozRequestFullScreen();
+		   //console.log("1");
+		   }else if(video.webkitRequestFullScreen){
+		   video.webkitRequestFullScreen();
+		  // console.log("2");
+			   }
+	   }else{
+	   img.src="../image/fullscreen.png";
+	   }
+      //console.log(img.src);
+	  },false);
+ }
+ </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<!--
+选项卡
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>AngularTest</title>
+    <style>
+        .box input{
+            background: #ccc;
+        }
+        .box .active{
+            background: yellow;
+        }
+        .box div{
+            width:200px;
+            height:200px;
+            display:none;
+            border: 1px solid black;
+        }
+        .box .current{
+            display: block;
+        }
+    </style>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.controller('main',function($scope){
+            $scope.now = 0;
+            $scope.json ={
+                'button1':'111111111111',
+                'button2':'222222222222',
+                'button3':'333333333333'};
+            $scope.changeNum = function(n){
+                $scope.now = n;
+            }
+        });
+    </script>
+</head>
+<body ng-controller="main">
+ <div class="box">
+     <input type="button" title="" class="{{$index==now?'active':''}}" value="{{key}}" ng-repeat="(key,value) in json" ng-click="changeNum($index)">
+     <div class="{{$index==now?'current':''}}" ng-repeat="(key,value) in json">{{value}}</div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angulaoRoute</title>
+    <script src="../JS/angular.js"></script>
+    <script src="../JS/angular-route.js"></script>
+    <script>
+        let app = angular.module('app',['ngRoute']);
+        app.controller('main',function(data, $scope){
+            console.dir(data);
+        });
+        app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider, $rootScope) {
+            $locationProvider.hashPrefix(''); //这是因为Angular 1.6 版本更新后 对路由做的处理，这样才可以和以前版本一样正常使用
+            $routeProvider
+                .when('/',{
+                    template:'This is Home',
+                    controller:'main',
+                    resolve:{
+                        'data': function($http){
+                            return $http.get('../www/data.txt').then(function success(res){
+                                return res.data;
+                            },function error(){
+                                return false;
+                            });
+                        }
+                    }
+                })
+                .when('/music', {template:'This is Music'})
+                .when('/computer', {template:'This is Computer'})
+                .otherwise({redirectTo: '/'});
+        }]);
+    </script>
+</head>
+<body>
+    <h2>AngularJS应用</h2>
+    <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/music">Music</a></li>
+        <li><a href="#/computer">Computer</a></li>
+        <li><a href="#/other">其他</a></li>
+    </ul>
+    <div ng-view></div>
+</body>
+</html>

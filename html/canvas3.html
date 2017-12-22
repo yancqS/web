@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas3</title>
+<style>
+	#canvas{
+		background: #ccc;
+	}	
+</style>
+</head>
+<script>
+ window.onload=function(){
+	 var canvas=document.getElementById("canvas");
+	 var cobj=canvas.getContext("2d");
+	 cobj.lineWidth=3;
+	 cobj.lineCap="round";
+	 cobj.lineJoin="bevel";
+	 cobj.moveTo(400,200);
+	 cobj.lineTo(450,450);
+	 cobj.lineTo(500,200);
+	 cobj.stroke();
+	 drawRect(100,100,200,300);
+	 drawCircle(100,100,100);
+	 drawCircle(300,400,100);
+	 //cobj.arc(300,300,0,0.5*Math.PI,false);
+	 //cobj.stroke();
+	 //cobj.closePath();
+	 //画矩形
+	 function drawRect (x,y,w,h) {
+		 cobj.beginPath();
+		 cobj.moveTo(x,y);
+		 cobj.lineTo(x+w,y);
+		 cobj.lineTo(x+w,y+h);
+		 cobj.lineTo(x,y+h);
+		 cobj.closePath();
+		 cobj.stroke();
+	 }
+	 //画圆形
+	 function drawCircle(x,y,r) {
+		//cobj.lineTo(x,y);
+		 for (var i=0;i<360;i++) {
+			 cobj.lineTo(r*Math.cos(i*Math.PI/180)+x,r*Math.sin(i*Math.PI/180)+y);
+			 cobj.stroke();
+		 }
+		 cobj.beginPath();
+	 }
+ }	
+</script>
+<body>
+ <canvas id="canvas" width="500" height="500">您的浏览器不支持canvas标签</canvas>
+</body>
+</html>

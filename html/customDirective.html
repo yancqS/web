@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>CustomDirevtive</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module("myApp",[]);
+        app.controller("myController",function($scope) {
+            $scope.name = "张三";
+        });
+        app.directive("myDirect",function() {
+            return {
+                restrict:"E",
+                template:"<div>自定义Scope:<input type='text' ng-model='inputs'/><br/><span>{{inputs}}</span></div>",
+                scope:{
+                    inputs:'@'
+                }
+
+            }
+        });
+    </script>
+</head>
+<body ng-controller="myController">
+  <p>父Scope:<input title="" type="text" ng-model="input"/></p>
+  <p>{{input}}</p>
+  <my-direct inputs="{{input}}"></my-direct>
+  <my-direct inputs="{{input}}"></my-direct>
+</body>
+</html>

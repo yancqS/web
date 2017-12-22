@@ -1,0 +1,18 @@
+.box {
+  width: 400px; }
+
+nav {
+  border: 1px solid #ccc;
+    border-left: 0px;
+    border-right: 0px; }
+
+article ~ article {
+  border-top: 1px dashed #ccc; }
+article > section {
+  background: #eee; }
+article dl > dt {
+  color: #333; }
+article dl > dd {
+  color: #555; }
+nav + article {
+  margin-top: 0; }

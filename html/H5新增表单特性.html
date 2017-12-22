@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单</title>
+</head>
+<body>
+ <form action="sub.php" method="post" id="myform" enctype="multipart/form-data" novalidate></form>
+ <!--form为表单新增属性，可以使表单更自由，不必完全写在<form>里面-->
+   姓名：<input type="text" name="names" form="myform" required  pattern="^[0-9]\d{3}$" placeholder="请输入您的姓名" autofocus autocomplete="off"/><br/>
+   个人主页：<input type="url" name="url" form="myform" required/><br/>
+   出生日期：<input type="date" name="data" form="myform"><br/>
+   提交时间：<input type="time" name="time" form="myform"><br/>
+   month:<input type="month" name="month" form="myform"><br/>
+   week:<input type="week" name="week" form="myform"><br/>
+   datetime:<input type="datetime" name="datetime" form="myform"><br/>
+   datetime-local:<input type="datetime-local" name="datetime-local" form="myform"><br/>
+   数字：<input type="number" max="10" min="1" step="1" value="3" name="number" form="myform"><br/>
+   range:<input type="range" max="10" min="0" step="1" value="3" form="myform"><br/>
+   search:<input type="search" name="search" form="myform" results="s"><br/>
+   tel:<input type="tel" name="tel" form="myform"><br/><!--浏览器不支持-->
+   颜色拾取器：<input type="color" form="myform" name="color"><br/>
+   上传文件:<input type="file" name="files[]" form="myform" multiple><br/>
+   年龄:<input type="text" name="text" form="myform" list="url">
+       <datalist id="url">
+		  <option>1</option>
+		  <option>2</option>
+		  <option>3</option>
+		  <option>4</option>
+	   </datalist>
+	   <br/>
+   <input type="submit" value="提交" name="sub" form="myform">
+   <input type="reset" name="reset" value="重置" form="myform">
+</body>
+</html>

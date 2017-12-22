@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angularUIRouter</title>
+    <style>
+        .active { color: red; font-weight: bold; }
+    </style>
+    <script src="../JS/angular.js"></script>
+    <script src="../JS/angular-ui-router.js"></script>
+    <script>
+        let app = angular.module('app',['ui.router']);
+        app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider, $state){
+            $urlRouterProvider.otherwise('/index');
+            $stateProvider
+                .state('hello',{
+                url: '/hello/:id',
+                template: '<h3>hello world!</h3><div ui-view></div>',
+                data:{
+                  current_page:1,
+                  page_size:30
+                },
+                resolve: {
+                    'data':function ($http) {
+                        return $http.get('../www/data.txt').then(res=>{
+                            return res.data;
+                        },err=>{
+                            return err;
+                        });
+                    }
+                },
+                controller: 'hellocon'
+            })
+                .state('hello.about',{
+                    url: '^/about',
+                    template: '<h3>Its the UI-Router hello world app!</h3>'
+                })
+                .state('index',{
+                    url:'/index',
+                    views:{
+                        'head':{template:'<div>head content</div>'},
+                        'nav1':{template:'<div>nav content</div>'},
+                        'body':{template:'<div>body content</div>'}
+                    },
+                    onEnter: function(){
+                        alert('Welcom');
+                    },
+                    onExit: function($state){
+                       if(!window.confirm('你确定要离开吗?')){
+                            $state.go('/index');
+                       }
+                    }
+                })
+                .state('index1',{
+                    url:'/index1',
+                    abstract:true,
+                    views:{
+                        'index1':{template:'<div><div ui-view="head1"></div><div ui-view="nav2"></div><div ui-view="body1"></div></div>'},
+                        'head1@index1':{template:'<div>头部内容header</div>'},
+                        'nav2@index1':{template:'<div>菜单内容nav</div>'},
+                        'body1@index1':{template:'<div>主体内容body</div>'}
+                    }
+                })
+                .state('index1.content1',{
+                    url:'/content1',
+                    views:{
+                        "body1@index1":{template:'<div>content11111111</div>'}
+                    }
+                })
+                .state('index1.content2',{
+                    url:'/content2',
+                    views:{
+                        nav2:{template:'<div>content222222222222</div>'}
+                    }
+                })
+        }]);
+        app.controller('hellocon', function($scope, $stateParams, $state, data){
+            console.dir(data);
+            console.log($state.current.data.current_page);
+            console.log($state.current.data.page_size);
+            alert($stateParams.id);
+        });
+    </script>
+</head>
+<body>
+    <a ui-sref="hello({id:2})" ui-sref-active="active">Hello</a>
+    <a ui-sref="hello.about" ui-sref-active="active">About</a>
+    <a ui-sref="index" ui-sref-active="active">multiviews</a>
+    <a ui-sref="index1" ui-sref-active="active">show index(abstract:true不能被激活)</a>
+    <a ui-sref="index1.content1">con1</a>
+    <a ui-sref="index1.content2">con2</a>
+    <div ui-view></div>
+    <div>
+        <div ui-view="head"></div>
+        <div ui-view="nav1"></div>
+        <div ui-view="body"></div>
+    </div>
+    <div ui-view="index1"></div>
+    <span>{{id}}</span>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>webkitNotifications</title>
+</head>
+
+<body>
+ <button>Show Notification</button>
+ <script type="text/javascript">
+   let btn=document.getElementsByTagName("button")[0];
+   // 首先，让我们检查我们是否有权限发出通知
+  // 如果没有，我们就请求获得权限
+   if(window.Notification && Notification.permission !== "granted"){
+	   Notification.requestPermission(function(status){
+		   if(Notification.permission !== status){
+			   Notification.permission = status;
+		   }
+	   });
+   }
+	btn.onclick=function(){
+	 if(Notification.permission==="granted"){
+	   let options={
+		   body:"杨幂给您发来了一条短消息",
+		   icon:"../image/weixin.jpg",
+		   lang:"utf-8"
+	   };
+	   let optionmsg={
+		   body:"晚上有时间吗，一块吃个饭",
+		   icon:"../image/yangmi.jpg",
+		   tag:"sayhi",
+		   lang:"utf-8"
+	   };
+	   let Notice=new Notification("微信消息",options);
+	   Notice.onclick=function(){
+	    let Noticemsg=new Notification("杨幂",optionmsg);
+		setTimeout(Notice.close.bind(Noticemsg), 5000);
+	   };
+	   Notice.onclose=function(){
+		   //alert("close");
+	   };
+	   setTimeout(Notice.close.bind(Notice), 8000);
+      }else{
+		  alert("请先获取权限，谢谢");
+	  }
+	}
+</script>
+</body>
+</html>

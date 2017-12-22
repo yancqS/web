@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <!--
+    指令:ng-app ng-controller ng-init ng-repeat
+    依赖:$http jsonp请求  $scope $sce
+    -->
+    <meta charset="UTF-8">
+    <title>angularTest</title>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.controller('main',function ($scope,$http,$sce) {
+            $scope.arr = [];
+            $scope.word='';
+            $scope.$watch('word',function () {
+               let resB = $sce.trustAsResourceUrl(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${$scope.word}`);
+                $http.jsonp(resB,{jsonpCallbackParam:'cb'}).then(res=>{
+                    $scope.arr=res.data.s;
+                },err=>{
+                    alert('error');
+                });
+            });
+        });
+    </script>
+</head>
+<body ng-controller="main">
+ <input type="text" title="" ng-model="word"/>
+ <ul>
+     <li ng-repeat="str in arr">{{str}}</li>
+ </ul>
+</body>
+</html>
+
+

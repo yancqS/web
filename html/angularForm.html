@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angularForm</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background: #ccc;
+            border-radius: 5px;
+            box-shadow: 3px 3px 2px ;
+            margin: 20px;
+        }
+    </style>
+    <script src="../JS/angular.js"></script>
+    <script>
+        let app = angular.module('app',[]);
+        app.controller('main',function ($scope) {
+            $scope.mycity = 'SH';
+            $scope.boo = angular.isArray([12,3,5]);
+            $scope.eq = '???';
+            $scope.com = function(eq1,eq2){
+                $scope.eq = angular.equals(eq1,eq2);
+            };
+            $scope.json = {'name':'lisi','age':'12','job':'student'};
+            $scope.re = angular.fromJson($scope.json);
+            console.log($scope.re);
+            let obj = {
+                name:'lisi',
+                age:22,
+                job:'ss'
+            };
+            console.log(obj);
+            console.log(angular.toJson(obj));
+        });
+    </script>
+</head>
+<body ng-controller="main">
+ IN: <input type="text" title="" ng-model="word"><br>
+ OUT:<input type="text" title="" ng-model="word"><br>
+ <div>{{word}}</div>
+ <input type="checkbox" title="" ng-model="boolean">
+ <input title="" type="button" ng-disabled="boolean" value="阿牛">
+ <div ng-show="boolean">{{boolean}}</div><span>{{boolean}}</span>
+ <input title="" type="radio" value="cat" ng-model="animal"> catmiao
+ <input title="" type="radio" value="dog" ng-model="animal"> dogwang
+ <input title="" type="radio" value="snack" ng-model="animal"> snakesss
+ <span>你选中的是:{{animal}}</span>
+ <select title="city" ng-model="mycity">
+     <option value="BJ">北京</option>
+     <option value="SH">上海</option>
+     <option value="GD">广东</option>
+     <option value="LC">聊城</option>
+ </select>
+ <span>城市缩写:{{mycity}}</span><br>
+ <input type="text" title="" ng-model="numorstr" ng-list>{{numorstr}}
+ <div ng-switch="boo">
+     <span ng-switch-when="true">Array</span>
+     <span ng-switch-when="false">not Array</span>
+ </div>
+ <input type="text" ng-model="eq1" title=""><br>
+ <input type="text" ng-model="eq2" title="">
+ <button ng-click="com(eq1,eq2)">compare</button><span>{{eq}}</span>
+ <br><br>
+</body>
+</html>
