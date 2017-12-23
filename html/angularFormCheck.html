@@ -37,7 +37,7 @@
         </div>
 
         <div id="password-group">
-            <label for="password">密码:</label> <input type="password" class="form-control" ng-model="pass" ng-minlength="6" ng-maxlength="20" ng-pattern="/\d+/g" name="pass" id="password" placeholder="请输入密码..." required>
+            <label for="password">密码:</label> <input type="password" class="form-control" ng-model="pass" ng-minlength="6" ng-maxlength="20" ng-pattern="/^\d+$/g" name="pass" id="password" placeholder="请输入密码..." required>
             <p>
                 <span style="color: red" ng-show="registerForm.pass.$invalid">
                     <span ng-show="registerForm.pass.$error.minlength">*密码长度不小于6</span>
