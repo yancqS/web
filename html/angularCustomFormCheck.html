@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>angularCustomFormCheck</title>
+    <link href="../CSS/bootstrap.css" rel="stylesheet">
     <script src="../JS/angular.js"></script>
     <script>
         let app = angular.module('app',[]);
@@ -38,14 +39,15 @@
     </script>
 <body>
     <form name="myForm" novalidate>
-        <div>
-            <input title="" type="text" name="username" minlength="2" ng-model="username" name-check required>
-            <span style="color:red" ng-show="myForm.username.$error.minlength">*名称过短</span>
-            <span style="color:red" ng-show="myForm.username.$error.required">*名称必须</span>
-            <span style="color:red" ng-show="myForm.username.$error.char">*非法字符串</span>
-            <span style="color:red" ng-show="myForm.username.$error.exist">*用户已存在</span>
+        <div class="form-group" style="width: 40%; margin:20px auto ;">
+            <div class="h1">用户注册:</div>
+            <input class="form-control" title="" type="text" name="username" minlength="2" ng-model="username" name-check required>
+            <span style="color:red" ng-if="myForm.username.$error.minlength">*名称过短</span>
+            <span style="color:red" ng-if="myForm.username.$error.required">*名称必须</span>
+            <span style="color:red" ng-if="myForm.username.$error.char">*非法字符串</span>
+            <span style="color:red" ng-if="myForm.username.$error.exist">*用户已存在</span><br>
+            <input type="button" value="提交" class="btn btn-default" ng-disabled="myForm.username.$invalid">
         </div>
-        <input type="button" value="提交" ng-disabled="myForm.username.$invalid">
     </form>
 </body>
 </html>
