@@ -1,0 +1,158 @@
+<!--
+Typography(排版)
+Grid system(栅格系统)
+code(代码)
+tables(表格)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap排版</title>
+    <style>
+        a:hover{
+            cursor: pointer;
+        }
+        .row{
+            margin-top:20px;
+        }
+        [class*='col-']{
+            padding-top:20px;
+            padding-bottom: 0;
+            text-align: center;
+            background-color: #eee;
+            background-color: rgba(86,61,124,0.15);
+            border:1px solid #ddd;
+            border:1px solid rgba(86,61,124,0.2);
+        }
+    </style>
+    <link href="../CSS/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="margin-bottom: 40px">
+    <a class="h1">bootstrap<span class="small">subtitle</span></a>
+    <div class="row">
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-1">col-md-1</div>
+        <div class="col-md-4">col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-3">col-md-offset-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            col-md-8
+            <div class="row">
+                <div class="col-sm-6">col-sm-6
+                    <div class="row">
+                        <div class="col-xs-8">col-xs-8</div>
+                        <div class="col-xs-4">col-xs-4</div>
+                    </div>
+                </div>
+                <div class="col-sm-6">col-sm-6</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-md-push-3">col-md-9</div>
+        <div class="col-md-3 col-md-pull-9">col-md-3</div>
+    </div>
+    <p class="lead">
+        Nullam <mark>quis</mark> risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient
+        montes,nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.Cum sociis natoque penatibus et magnis
+    </p>
+    <p>
+        dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis,
+        est non commodo luctus
+    </p>
+    <p>
+        nisi erat porttitor ligula, <ins>eget lacinia</ins> odio sem nec elit. Donec ullamcorper nulla non
+        metus auctor fringilla.
+    </p>
+    <div style="width: 50%;border:1px solid pink;border-radius:5px;box-shadow: 2px 1px 1px green">
+        <p class="text-center">hello</p>
+        <p class="text-left">libai</p>
+        <p class="text-right">woshiMT</p>
+        <p class="text-justify">woshiMTJUstify</p>
+        <p class="text-lowercase">PLAY CCCCFFFFF</p>
+        <p class="text-uppercase">who is your babby</p>
+        <p class="text-capitalize">play cf come on</p>
+    </div><br><br>
+    <abbr class="h3" title="attribute">attr</abbr>
+    <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+    <blockquote>
+        learn something is ok<footer>毛泽东:<cite>《毛泽东文集》</cite></footer>
+    </blockquote>
+    <ul class="list-unstyled">
+        <li>apple</li>
+        <li>pear</li>
+        <li>peach</li>
+        <ul>
+            <li>BJ</li>
+            <li>YN</li>
+            <li>SZ</li>
+        </ul>
+    </ul>
+    <ul class="list-inline">
+        <li>PHP</li>
+        <li>Javascript</li>
+        <li>ruby</li>
+        <li>python</li>
+    </ul>
+    <dl class="dl-horizontal">
+        <dt>Teacher:4+4=?</dt>
+        <dd>student:等于5</dd>
+        <dt>Teacher:不对</dt>
+        <dd>student:那就等于8吧</dd>
+    </dl>
+    To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+    To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd><br><hr>
+    <div class="table-responsive">
+    <table class="table table-bordered">
+        <caption class="h2">班级信息</caption>
+        <thead>
+            <tr class="active">
+                <th>name</th>
+                <th>age</th>
+                <th>job</th>
+                <th>status(active)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="success">
+                <td>Tom</td>
+                <td>12</td>
+                <td>stustudentstudentstudentstudentstudentdent</td>
+                <td>success</td>
+            </tr>
+            <tr class="info">
+                <td>Jerry</td>
+                <td>13</td>
+                <td>wristudentstudentstudentstudentstudentstudentter</td>
+                <td>info</td>
+            </tr>
+            <tr class="warning">
+                <td>Jerry</td>
+                <td>13</td>
+                <td>wristudentstudentstudentstudentstudentstudentter</td>
+                <td>warning</td>
+            </tr>
+            <tr class="danger">
+                <td>Jerry</td>
+                <td>13</td>
+                <td>wristudentstudentstudentstudentstudentstudentstudentter</td>
+                <td>danger</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+</div>
+</body>
+</html>
