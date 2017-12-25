@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b411ce3c-9e22-48a4-b764-3e405d21d9c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/bootstrap1.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/bootstrapCss.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/html/bootsrapForm.html" afterPath="$PROJECT_DIR$/html/bootsrap-Form.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/html/bootstrap1.html" afterPath="$PROJECT_DIR$/html/bootstrap-Typography.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,15 +35,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bootsrapForm.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/bootsrapForm.html">
+      <file leaf-file-name="bootstrapComponent-dropDown.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/bootstrapComponent-dropDown.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="134" column="14" lean-forward="true" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="304">
+              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,8 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/del1.html" />
-        <option value="$PROJECT_DIR$/html/Geolocation.html" />
         <option value="$PROJECT_DIR$/html/Notification.html" />
         <option value="$PROJECT_DIR$/html/wanwan.html" />
         <option value="$PROJECT_DIR$/html/XMLHttpRequestjQueryJsonp.html" />
@@ -133,6 +127,8 @@
         <option value="$PROJECT_DIR$/html/bootstrapCss.html" />
         <option value="$PROJECT_DIR$/html/bootstrap1.html" />
         <option value="$PROJECT_DIR$/html/bootsrapForm.html" />
+        <option value="$PROJECT_DIR$/html/bootstrap-button.html" />
+        <option value="$PROJECT_DIR$/html/bootstrapComponent-dropDown.html" />
       </list>
     </option>
   </component>
@@ -203,7 +199,7 @@
             <path>
               <item name="YanProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CSS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="image" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -230,14 +226,14 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/YanProject/html/angularFirst1.html" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\YanProject\CSS" />
-      <recent name="D:\YanProject\html" />
-      <recent name="D:\YanProject\JS" />
-      <recent name="D:\YanProject\php" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\YanProject" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\YanProject\JS" />
+      <recent name="D:\YanProject\CSS" />
+      <recent name="D:\YanProject\html" />
+      <recent name="D:\YanProject\php" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -354,12 +350,12 @@
       <workItem from="1514015563865" duration="9943000" />
       <workItem from="1514036737939" duration="27000" />
       <workItem from="1514073587703" duration="19536000" />
-      <workItem from="1514163772316" duration="5716000" />
+      <workItem from="1514163772316" duration="22761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="435011000" />
+    <option name="totallyTimeSpent" value="452056000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -464,27 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/canvas之万花筒.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/weibo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1985">
-          <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SCSS/demo.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -775,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/bootstrap1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1128">
-          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CSS/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -790,14 +758,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/bootsrapForm.html">
+    <entry file="file://$PROJECT_DIR$/html/bootstrap-Typography.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="134" column="14" lean-forward="true" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
+        <state relative-caret-position="24">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootsrap-Form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="158" column="22" lean-forward="true" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#form#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootstrap-button.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/background.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootstrapComponent-dropDown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
