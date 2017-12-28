@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navbar</title>
+    <style>
+        .container{
+            margin:10px;
+        }
+        body{
+            padding-top:50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+    <script src="../JS/jquery-3.1.1.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <script>
+        $(document).ready(function () {
+            $("#mytab").find("a").on("click",function(e){
+                e.preventDefault();
+                $(this).tab("show");
+            });
+            $("#page").find("a").click(function (e) {
+                e.preventDefault();
+                $(this).tab("show");
+            });
+            $("#h4").on("click", function () {
+                $(this).find("span").hide();
+            });
+            let num = 0;
+            function add() {
+                if(num>=100){
+                    alert("success");
+                    clearInterval(dt);
+                }
+                num=num+0.1;
+                $("#pb").find("div").attr('style',`width:${num}%`);
+            }
+            let dt = setInterval(add, 100);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navabr navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand" style="padding: 5px">
+                    <img src="../image/index.png" alt="indexlogo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="mytab">
+                    <li class="active"><a href="#link">Home</a></li>
+                    <li><a href="#info">Info</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            dropdown<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">baidu</a></li>
+                            <li><a href="#">google</a></li>
+                            <li><a href="#">bing</a></li>
+                            <li><a href="#">360</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" title="" class="form-control">
+                        <button class="btn btn-primary" type="button">search</button>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">link</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            dropsown<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">info</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="link">Home Page</div>
+        <div role="tabpanel" class="tab-pane" id="info">Info Page</div>
+    </div>
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">ariticle</a></li>
+        <li><a href="#">comment</a></li>
+        <li class="active">detail</li>
+    </ol>
+    <nav id="page">
+        <ul class="pagination pagination-lg">
+            <li><a href="#"><span>&laquo;</span></a></li>
+            <li class="active"><a href="#1">1</a></li>
+            <li><a href="#2">2</a></li>
+            <li><a href="#3">3</a></li>
+            <li><a href="#4">4</a></li>
+            <li><a href="#5">5</a></li>
+            <li><a href="#"><span>&raquo;</span></a></li>
+        </ul>
+        <ul class="pager">
+            <li class="previous"><a href="#old"><span>&larr;</span> Older</a></li>
+            <li class="next"><a href="#next">Newer<span>&rarr;</span></a></li>
+        </ul>
+    </nav>
+    <h4 id="h4"><a href="#">一人之下12话</a><span class="label label-info small">New</span></h4>
+    <a href="#">Inbox<span class="badge">23</span></a>
+    <button type="button" class="btn btn-primary">Message<span class="badge">33</span></button>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Hello Vue</h1>
+            <p>The most popular FrameworkThe most popular FrameworkThe most popular Framework
+                The most popular FrameworkThe most popular FrameworkThe most popular Framework
+            </p>
+            <button class="btn btn-primary btn-lg" type="button">Start</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="../image/yangmi.jpg" alt="yangmi">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>123444123444123444123444</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="../image/yangmi.jpg" alt="yangmi">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>123444123444123444123444</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="../image/yangmi.jpg" alt="yangmi">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>123444123444123444123444</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-danger"><strong>DANGER!</strong>The error is fatal</div>
+        <div class="alert alert-danger alert-dismissible">
+            <button class="close" type="button" data-dismiss="alert"><span>&times;</span></button>
+            <strong>DANGER!</strong>The Error is fatal<a href="#" class="alert-link pull-right">Help</a>
+        </div>
+        <div class="progress" id="pb">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                <span class="sr-only">40% Complete (success)</span>
+            </div>
+        </div>
+        <p id="content"></p>
+    </div>
+</body>
+</html>
