@@ -33,18 +33,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bootstrapNavbar.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/bootstrapNavbar.html">
+      <file leaf-file-name="bootstrap-Scroll.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/bootstrap-Scroll.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="38" column="67" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+            <state relative-caret-position="192">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3865#3872#1" expanded="true" />
-                <element signature="e#4138#4145#1" expanded="true" />
-                <element signature="e#4257#4263#1" expanded="true" />
-                <element signature="e#4342#4348#1" expanded="true" />
-                <element signature="e#6855#6862#1" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,8 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/wanwan.html" />
-        <option value="$PROJECT_DIR$/html/XMLHttpRequestjQueryJsonp.html" />
         <option value="$USER_HOME$/Desktop/all/sum/html/css实现三角形应用对话框.html" />
         <option value="$PROJECT_DIR$/html/angularSecond.html" />
         <option value="$PROJECT_DIR$/html/angularThird.html" />
@@ -134,6 +127,8 @@
         <option value="$PROJECT_DIR$/html/bootstrap-button.html" />
         <option value="$PROJECT_DIR$/html/bootstrapComponent-dropDown.html" />
         <option value="$PROJECT_DIR$/html/bootstrapNavbar.html" />
+        <option value="$PROJECT_DIR$/html/bootstrap-JS-Plugin.html" />
+        <option value="$PROJECT_DIR$/html/bootstrap-Scroll.html" />
       </list>
     </option>
   </component>
@@ -195,7 +190,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,12 +200,13 @@
             <path>
               <item name="YanProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="video" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,11 +356,18 @@
       <workItem from="1514382529066" duration="266000" />
       <workItem from="1514418898025" duration="11121000" />
       <workItem from="1514438458532" duration="13101000" />
+      <workItem from="1514465898538" duration="23000" />
+      <workItem from="1514466156161" duration="571000" />
+      <workItem from="1514506566254" duration="662000" />
+      <workItem from="1514944782507" duration="1267000" />
+      <workItem from="1515110483591" duration="4304000" />
+      <workItem from="1515115751630" duration="1361000" />
+      <workItem from="1515117213249" duration="18726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505968000" />
+    <option name="totallyTimeSpent" value="532882000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,11 +382,11 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642964" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32840723" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="false" weight="0.32894737" sideWeight="0.48789713" order="8" side_tool="false" content_ui="tabs" x="483" y="141" width="400" height="445" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48789713" order="8" side_tool="false" content_ui="tabs" x="483" y="141" width="400" height="445" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32676518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43914473" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -470,27 +472,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/cusService.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="67" column="11" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/conText.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1656">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/weibo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1481">
@@ -600,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="275" column="17" lean-forward="true" selection-start-line="275" selection-start-column="17" selection-end-line="275" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/bootstrap-Typography.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -614,23 +588,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/bootstrap-button.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/image/background.gif">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/bootsrap-Form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3006">
-          <caret line="162" column="59" lean-forward="true" selection-start-line="162" selection-start-column="59" selection-end-line="162" selection-end-column="59" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/image/takeSbmComment.png">
@@ -749,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/bootstrapComponent-dropDown.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3224">
-          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/template/banner.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1272">
@@ -803,17 +756,71 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6336">
+          <caret line="264" column="0" lean-forward="true" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/bootstrap.css.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1968">
+          <caret line="0" column="442" lean-forward="true" selection-start-line="0" selection-start-column="442" selection-end-line="0" selection-end-column="442" />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootstrap-button.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/bootstrapNavbar.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="170" column="28" lean-forward="true" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootstrapComponent-dropDown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootsrap-Form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="152" column="18" lean-forward="true" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootstrap-JS-Plugin.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="38" column="67" lean-forward="false" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3865#3872#1" expanded="true" />
-            <element signature="e#4138#4145#1" expanded="true" />
-            <element signature="e#4257#4263#1" expanded="true" />
-            <element signature="e#4342#4348#1" expanded="true" />
-            <element signature="e#6855#6862#1" expanded="true" />
+            <element signature="e#2157#2164#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootstrap-Scroll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
