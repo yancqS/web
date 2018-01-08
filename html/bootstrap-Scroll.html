@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>bootstrap-Scroll</title>
+    <style>
+        .container{
+            margin-bottom: 100px;
+        }
+    </style>
     <script src="../JS/jquery-3.1.1.js"></script>
     <script src="../JS/bootstrap.js"></script>
     <link href="../CSS/bootstrap.css" rel="stylesheet">
     <script>
         $(document).ready(function () {
             $("#myspy").on('activate.bs.scrollspy', function () {
-                alert("Good");
+                console.log("Good");
             });
+            $("button[data-toggle='tooltip']").tooltip({
+                delay:{
+                    'show':200,
+                    'hide':100
+                },
+                html:true,
+                trigger:'click'
+            });
+            $("[data-toggle='popover']").popover();
         });
     </script>
 </head>
@@ -111,6 +125,53 @@
                 形成核心自主产品，提升观测能力，突破国外封锁。二是观测网拓展。着力提高观测网的时空分辨率，从单一观测拓展为多要素综合观测，形成立体、实时、
                 多学科的观测网。三是理论创新。深入开展西太平洋—中国海—印度洋与极地环境、气候、资源的协同研究，力争在海洋环境多尺度变化机理及气候资源效应等方面取得重大原始创新。
                 四是预测系统构建。逐步有序构建起西太平洋—中国海—印度洋气候预测系统以及针对国家具体要求的区域预测系统，形成多层次、多学科、多目标的预测体系。</p>
+        </div>
+        <div>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#baidu" data-toggle="tab">百度</a></li>
+                <li><a href="#360" data-toggle="tab">360</a></li>
+                <li><a href="#bing" data-toggle="tab">必应</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">选择地区<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#qingdao" data-toggle="tab">青岛</a></li>
+                        <li><a href="#jinan" data-toggle="tab">济南</a></li>
+                        <li><a href="#shanghai" data-toggle="tab">上海</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="baidu"><p>全球最大的中文搜索引擎、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。</p></div>
+                <div class="tab-pane fade" id="360"><p>360免费安全软件平台和智能硬件家居平台,免费安全软件平台为用户提供360安全卫士,360免费杀毒软件,360企业杀毒软件,360安全浏览器等安全软件,智能硬件家居平台包含360...</p></div>
+                <div class="tab-pane fade" id="bing"><p>Bing helps you turn information into action, making it faster and easier to go from searching to doing</p></div>
+                <div class="tab-pane fade" id="qingdao"><p>青岛大学</p></div>
+                <div class="tab-pane fade" id="jinan"><p>济南大学</p></div>
+                <div class="tab-pane fade" id="shanghai"><p>上海大学</p></div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="How to <i>use</i> tooltip">
+            MethodTop
+        </button>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="How to use tooltip">
+            MethodRight
+        </button>
+        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="How to use tooltip">
+            MethodLeft
+        </button>
+        <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="How to use tooltip">
+            MethodBottom
+        </button>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="popover" title="Popover Title" data-content="I wannt to do something which can help me" data-placement="top" data-trigger="hover">
+            clickMe
+        </button>
+        <div class="alert alert-danger alert-dismissible in fade" role="alert">
+            <button class="close" type="button" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            <b>DANGER</b> The error is fatal
+            <br>
+            <button class="btn btn-danger" data-dismiss="alert" type="button">Close</button>
+            <button class="btn btn-primary" type="button">save</button>
         </div>
     </div>
 </body>
