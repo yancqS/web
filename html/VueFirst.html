@@ -1,0 +1,65 @@
+<!--
+ Vue中的指令: v-model v-for
+ angular对应的指令: ng-model ng-repeat
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vueFirst</title>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/jquery-3.1.1.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <link rel="stylesheet" href="../CSS/bootstrap.css"/>
+    <style>
+        .container{
+            margin-top:30px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            new Vue({
+               el:'#box',
+               data:{    //相当于angular中的$scope,但是只能存放数据
+                   msg:"welcome Vue",
+                   arr:['apple','orange','pea'],
+                   json:{a:'apple',b:'orange',c:'pear'},
+                   a:true
+               },
+               methods:{ //主要写方法(函数)
+                   add:function () {
+                       //console.log(this);
+                       this.arr.push("tomato");
+                       console.log(this.arr);
+                   },
+                   toggle:function () {
+                       this.a = !this.a;
+                   }
+               }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box" class="container">
+        <input title="" type="text" v-model="msg">
+        <br/>{{msg}}
+        <br/>
+        <ul>
+            <li v-for="value in arr">{{value}}{{$index}}</li>
+        </ul>
+        <!--
+        循环json两种方法
+        -->
+        <ul>
+            <li v-for="item in json">{{item}}{{$index}}-{{$key}}</li>
+        </ul>
+        <ul>
+            <li v-for="(k,v) in json">{{k}} {{v}} {{$index}} {{$key}}</li>
+        </ul>
+        <input type="button" value="Button" v-on:click="add()">
+        <input type="button" value="show/hide" v-on:click="toggle()">
+        <div style="width: 50px; height: 50px; background: red" v-show="a"></div>
+    </div>
+</body>
+</html>

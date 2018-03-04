@@ -10,16 +10,16 @@
 </style>
 <script>
   window.onload=function(){
-	  var canvas=document.getElementById("canvas");
-      var cobj=canvas.getContext("2d");
-	  var le=document.getElementById("left");
-	  var to=document.getElementById("top");
-	  var left=le.innerHTML;
-	  var top=to.innerHTML;
+	  let canvas=document.getElementById("canvas");
+      let cobj=canvas.getContext("2d");
+	  let le=document.getElementById("left");
+	  let to=document.getElementById("top");
+	  let left=le.innerHTML;
+	  let top=to.innerHTML;
 	  cobj.rect(100,100,50,80);
 	  cobj.stroke();
 	  document.onkeydown=function(e){
-		  var ev=e||window.Event;
+		  let ev=e||window.Event;
 		  if(ev.keyCode===37){
 			  (function(){
 			  left--;

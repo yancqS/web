@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/jquery-3.1.1.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <link rel="stylesheet" href="../CSS/bootstrap.css"/>
+    <style>
+        body{
+            background-image: url("../image/background.gif");
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:'.container',
+                data:{
+                    info:[],
+                    event:'',
+                    time:'',
+                    num:-100
+                },
+                methods:{
+                    add:function () {
+                        if(this.event!==''&&this.time!==''){
+                            this.info.push({
+                                event:this.event,
+                                time:this.time
+                            });
+                        }else {
+                            alert('所填写内容不可以为空!');
+                        }
+                        this.event='';
+                        this.time='';
+                    },
+                    del:function (n) {
+                        this.info.splice(n,1);
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="h2 text-center text-danger">TODOLIST</div>
+    <div class="container">
+        <form class="form-horizontal" style="margin-top: 30px">
+            <div class="form-group">
+                <label for="event" class="col-sm-2 control-label">EVENT:</label>
+                <div class="col-sm-8">
+                    <input id="event" type="text" class="form-control" placeholder="Input Event" v-model="event">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="time" class="col-sm-2 control-label">TIME:</label>
+                <div class="col-sm-8">
+                    <input id="time" type="text" class="form-control" placeholder="Input Time" v-model="time">
+                </div>
+            </div>
+            <!--
+             注意:默认的button不加类型是 submit 会提交当前页面所以会刷新，加上type="button"即可解决点击按钮页面刷新问题。
+             -->
+            <div class="text-center">
+                <button class="btn btn-primary" style="margin-right: 100px" v-on:click="add" type="button">ADD</button>
+                <button class="btn btn-danger" type="button">RESET</button>
+            </div>
+        </form>
+        <table class="table table-hover table-bordered">
+            <caption class="h4 text-center">待办事项</caption>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>EVENT</th>
+                    <th>TIME</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="json in info">
+                    <td>{{$index+1}}</td>
+                    <td>{{json.event}}</td>
+                    <td>{{json.time}}</td>
+                    <td>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#modal" v-on:click="num=$index">DONE</button>
+                    </td>
+                </tr>
+                <tr v-show="info.length===0">
+                   <td colspan="4" class="text-center">暂无数据...</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal fade" role="dialog" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="modal-title">ARE YOU SURE DEL THIS DATA?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <button class="btn btn-primary btn-sm" data-dismiss="modal" v-on:click="del(num)">YES</button>
+                        <button class="btn btn-danger btn-sm" data-dismiss="modal">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
