@@ -1,0 +1,122 @@
+<!--
+ 1.事件对象:$event
+ 2.取消时间冒泡的两种方法:一、原生JS ev.cancelBubble = true;二、@事件.stop="...."
+ 3.取消时间默认行为两种方法:一、原生JS: ev.preventDefault();二、@事件.prevent="...."
+ 4.键盘事件:@keydown/keyup 键码:ev.keyCode
+   对于常用键的键码封装:@keydown.enter/up/down/left/right...="..."
+                    @keyup.enter/up/down/left/right...="..."
+ 5.绑定属性:v-bind:属性,如:v-bind:src、v-bind:href...
+ 其简写为: :src、:href...
+ 6.class属性比较特殊:3种用法(见代码)
+ 7.style属性比较特殊:2种用法(见代码)
+ 8.过滤器:uppercase、lowercase、capitalize、limitBy、filterBy、orderBy、currency、debounce
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue事件深入</title>
+    <script src="../JS/vue.js"></script>
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <style>
+        .r{
+            color:red;
+        }
+        .b{
+            background: blue;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:'#box',
+                data:{
+                    url:'../image/bz.jpg',
+                    redH:'r',
+                    blueL:'b',
+                    t:false,
+                    json:{
+                        r:true,
+                        b:false
+                    },
+                    c:{color:'red'},
+                    b:{backgroundColor:'gray'},
+                    wh:{width:'100px',height:'150px'},
+                    msg:'welcome Vue',
+                    info:{
+                        name:'lihua',
+                        age:12,
+                        job:'teacher'
+                    },
+                    childrenArray:[
+                        {name:'kimi',age:3},
+                        {name:'cindy',age:4},
+                        {name:'anglar',age:4},
+                        {name:'shitou',age:'6a'},
+                        {name:'tiantian',age:5}
+                    ]
+                },
+                methods:{
+                    <!--事件对象-->
+                    show:function (ev) {
+                        console.log(ev);
+                        alert(ev.clientX);
+                        alert(ev.clientY);
+                    },
+                    show1:function (ev) {
+                        alert("show1函数");
+                        ev.cancelBubble=true;//取消事件冒泡
+                    },
+                    show2:function () {
+                        alert("show2函数");
+                    },
+                    RC:function () {
+                        alert('Right Click');
+                    },
+                    KC:function () {
+                        alert("You have press enter");
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!--事件对象-->
+    <div id="box" class="container" style="margin-top: 30px">
+        <button type="button" @click="show($event)" class="btn btn-primary">按钮</button>
+        <!--事件冒泡-->
+        <div @click="show2()" style="display: inline-block">
+            <button type="button" @click="show1($event)" class="btn btn-danger">button</button>
+        </div>
+        <!--取消事件默认行为-->
+        <button type="button" class="btn btn-default" @contextmenu.prevent="RC()">RClick</button>
+        <!--键盘事件-->
+        <input type="text" title="" @keyup.enter="KC()">
+        <!--绑定属性-->
+        <img :src="url" alt="" :style="wh">
+
+        <p :class="[redH,blueL]">Hello World</p><!--这里的redH、blueL指的是data中的数据-->
+        <p :class="{r:true,b:t}">Hello World</p><!--后两种其实是相同的-->
+        <p :class="json">Hello World</p>
+
+        <p :style="{color:'red',backgroundColor:'gray'}">good Morning</p>
+        <p :style="[c,b]">good Morning</p>
+        <!--模板-->
+        <input type="text" v-model="msg" title="">
+        <br>{{msg}}
+        <br>{{*msg}}
+        <br>{{{msg}}}
+        <!--过滤器(与angular中类似)-->
+        <br>{{msg|uppercase}}
+        <br>{{info|json}}
+        <br>{{[1,2,3,4,5,6,7,8,9]|limitBy 3 5}}
+        <div>
+            {{childrenArray|filterBy 'a'|json}}
+            <br>{{childrenArray|filterBy 'a' in 'age'|json}}
+            <br>{{childrenArray|orderBy 'age' 'name'|json}}
+            <br>{{12|currency}}
+        </div>
+    </div>
+</body>
+</html>

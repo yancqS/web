@@ -8,5 +8,5 @@ fs.writeFile("../www/jade.html",str,function(err,data){
 	}else{
 		console.log("success do it");
 	}
-})
+});
 console.log(str);

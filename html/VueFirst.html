@@ -1,6 +1,6 @@
 <!--
- Vue中的指令: v-model v-for
- angular对应的指令: ng-model ng-repeat
+ Vue中的指令: v-model v-for v-on:事件(@事件) v-show
+ angular对应的指令: ng-model ng-repeat ng-事件 ng-show
 -->
 <!DOCTYPE html>
 <html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
@@ -58,7 +58,7 @@
             <li v-for="(k,v) in json">{{k}} {{v}} {{$index}} {{$key}}</li>
         </ul>
         <input type="button" value="Button" v-on:click="add()">
-        <input type="button" value="show/hide" v-on:click="toggle()">
+        <input type="button" value="show/hide" @click="toggle()">
         <div style="width: 50px; height: 50px; background: red" v-show="a"></div>
     </div>
 </body>

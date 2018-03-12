@@ -1,0 +1,50 @@
+<!--
+ 1. Vue1.0的生命周期为: created => beforeCompile => compiled => ready => beforeDestory => destoryed
+ 以上这几个过程被称作 生命周期钩子函数。
+ 2. Vue2.0中做出了改变。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生命周期</title>
+    <script src="../JS/vue.js"></script>
+    <script>
+        window.onload = function () {
+            let vm = new Vue({
+                el:"#box",
+                data:{
+                    msg:"welcome Vue.JS"
+                },
+                created:function () {
+                    alert("msg is "+this.msg);
+                },
+                beforeCompile:function () {
+                    alert("编译之前");
+                },
+                compiled:function () {
+                    alert("编译之后");
+                },
+                ready:function () {
+                    alert("ready");
+                },
+                beforeDestory:function () {
+                    alert('要被销毁啦');
+                },
+                destoryed:function () {
+                    alert("已经被销毁啦");
+                }
+            });
+            /*点击页面销毁Vue对象*/
+            document.onclick = function () {
+                vm.$destroy();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        {{msg}}
+    </div>
+</body>
+</html>

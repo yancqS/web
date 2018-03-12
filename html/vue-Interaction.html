@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交互(get/post/jsonp)</title>
+    <style>
+        .show{
+            background: grey;
+        }
+    </style>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/vue-resource.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#box',
+                data:{
+                    wd:'',
+                    arr:[],
+                    nowIndex:-1
+                },
+                methods:{
+                    add:function () {
+                        this.$http.get('../php/get.php',{params:{a:1,b:3}}).then(function (res) {
+                            alert(res.data);
+                        },function (err) {
+                            alert(err.status);
+                        });
+                    },
+                    sub:function () {
+                        this.$http.post('../php/post.php',{a:1,b:3},{emulateJSON:true}).then(function (res) {
+                            alert(res.data);
+                        },function (err) {
+                            alert(err.status);
+                        });
+                    },
+                    showList:function (ev) {
+                        if(ev.keyCode === 38 || ev.keyCode === 40) return;//主要是为了检测是否是按上下键，如果是按上下键则无需发送jsonp请求。
+                        if(ev.keyCode === 13) location.href='https://www.baidu.com/s?&wd='+this.wd;//这个是搜索的接口,13是enter的键值
+                        this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+                            {params:{wd:this.wd},jsonp:'cb'}).then(function(res){
+                            this.arr=res.data.s;
+                        },function (err) {
+                            alert(err.status);
+                        });
+                    },
+                    changeDown:function () {
+                        this.nowIndex++;
+                        this.wd = this.arr[this.nowIndex];
+                        if(this.nowIndex>=this.arr.length)this.nowIndex=0;
+                    },
+                    changeUp:function () {
+                        this.nowIndex--;
+                        this.wd = this.arr[this.nowIndex];
+                        if(this.nowIndex<0)this.nowIndex=this.arr.length-1;
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="button" title="" @click="add()" value="get(add)">
+        <input type="button" title="" @click="sub()" value="post(sub)">
+        <input type="text" v-model="wd"  title="" @keyup="showList($event)" @keydown.down="changeDown()" @keydown.up.prevent="changeUp()">
+        <ul>
+            <li v-for="item in arr" :class="{show:$index==nowIndex}"><!--给其中的符合条件的li加上show类-->
+                {{item}}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
