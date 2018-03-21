@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-组件</title>
+    <script src="../JS/vue.js"></script>
+    <script type="x-template" id="myComponent">
+        <b>SECOND=>{{msg}}</b>
+    </script>
+    <script>
+        window.onload = function () {
+            //全局组件:在任何一个Vue实例下都可以使用
+            let myComponent = Vue.extend({
+                data:function () {
+                        return {
+                            msg:"ycq",
+                            arr:['lol','dota','dota2']
+                        }
+                },
+                methods:{
+                  change:function () {
+                      //console.log(this);
+                      this.msg = this.arr.length;
+                  }
+                },
+                template:"<h3 v-for='item in arr'>This is my first Component:{{item}}</h3><br><span @click='change'>{{msg}}</span>"
+            });
+            let secondC = Vue.extend({
+                template:"#myComponent",
+                data:function () {
+                    return {
+                        msg:'wowKILL'
+                    }
+                }
+            });
+            Vue.component('ycq',myComponent);
+            new Vue({
+                el:"#box",
+                //局部组件:只能在“#box”实例下使用
+                components:{
+                    'my-sec':secondC
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <ycq></ycq>
+        <my-sec></my-sec>
+    </div>
+</body>
+</html>

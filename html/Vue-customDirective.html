@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-自定义指令</title>
+    <style>
+        .ycqC{
+            width:200px;
+            height:200px;
+            position: absolute;
+            top:202px;
+            left:0
+        }
+    </style>
+    <script src="../JS/vue.js"></script>
+    <script>
+        window.onload = function () {
+            /**
+             *自定义指令
+             * **/
+            Vue.directive('drag',function (val) {
+                console.log(val);
+                console.log(this.vm.msg);
+                console.log(this.el);
+                if(val===false)return;
+                let oDiv = this.el;
+                oDiv.onmousedown = function (e) {
+                    let ev = e || window.event;
+                    let disX = ev.clientX-oDiv.offsetLeft;
+                    let disY = ev.clientY-oDiv.offsetTop;
+                    document.onmousemove = function (e) {
+                        let ev = e || window.event;
+                        let l = ev.clientX-disX;
+                        let t = ev.clientY-disY;
+                        oDiv.style.left = l+"px";
+                        oDiv.style.top = t+"px";
+                    }
+                };
+                document.onmouseup = function(){
+                    document.onmousemove = null;
+                }
+            });
+            Vue.directive("red",function () {
+                console.log(this.vm.msg);
+                console.log(this.el);
+               this.el.style.background='blue';
+            });
+            /*
+            * 自定义元素指令
+            * */
+            Vue.elementDirective('ycq',{
+                bind:function () {
+                    console.log(this);
+                    console.log(this.el.className);
+                    let color = this.el.getAttribute("color");
+                    console.log(color);
+                    this.el.style.background = color;
+                    this.el.innerHTML = "<b>自定义指令</b>";
+                }
+            });
+            /**
+             * 自定义键盘信息
+             * */
+            Vue.directive('on').keyCodes.ycq = 13;//13是enter的键码
+            new Vue({
+                el:"#box",
+                data:{
+                    msg:"welcome",
+                    move:true
+                }
+            });
+            new Vue({
+                el:"#sub",
+                data:{
+                    move:false,
+                    msg:'red'
+                }
+            });
+            new Vue({
+                el:".ycqC",
+            });
+            new Vue({
+                el:"#input",
+                methods:{
+                    show:function () {
+                        alert("VUE");
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box" v-drag="move" :style="{width:'100px',height:'100px',background:'red',position:'absolute',right:0,top:0}">
+        {{msg}}
+    </div>
+    <div id="sub" v-drag="move" v-red :style="{width:'100px',height:'100px',position:'absolute',left:0,top:'101px'}">
+        {{msg}}
+    </div>
+    <ycq class="ycqC" color="red"></ycq>
+    <input id="input" type="text" title="" @keydown.ycq="show()">
+</body>
+</html>

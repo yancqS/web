@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate-CSS动画库</title>
+    <style>
+        #box{
+            width:40%;margin:0 auto;
+        }
+        #content{
+            width:200px;height:200px;background:red;border-radius: 10%;
+        }
+    </style>
+    <script src="../JS/vue.js"></script>
+    <link rel="stylesheet" href="../CSS/animate.css">
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:"#box",
+                data:{
+                    flag:true
+                },
+                methods:{
+                    toggle:function () {
+                        this.flag = !this.flag;
+                    }
+                },
+                transitions:{ //定义所有对象名称
+                    custom:{
+                        enterClass:'zoomInLeft',//这是引入的animate.css库中定义好的类
+                        leaveClass:'zoomOutRight'
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="button" title="" @click="toggle()" value="BUTTON">
+        <div id="content" class="animated" v-show="flag" transition="custom"></div>
+    </div>
+</body>
+</html>

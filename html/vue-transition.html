@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-过渡</title>
+    <style>
+        #content{
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 10%;
+        }
+        .fade-transition{
+            transition: all 2s ease-in-out;
+        }
+        .fade-enter{
+            transform: translate(300px,300px) scale(0.5,0.5);
+            opacity: 0;
+        }
+        .fade-leave{
+            transform: translateX(500px) scale(2,2);
+            opacity: 0;
+        }
+    </style>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/jquery-3.1.1.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:"#box",
+                data:{
+                    flag:true
+                },
+                methods:{
+                    toggle:function () {
+                        this.flag = !this.flag;
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box" class="container" :style="{margin:'50px'}">
+        <input type="button" title="" @click="toggle()" value="BUTTON" class="btn btn-primary">
+        <div id="content" v-show="flag" transition="fade"></div>
+    </div>
+</body>
+</html>

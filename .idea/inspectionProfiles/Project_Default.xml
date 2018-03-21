@@ -1,7 +1,10 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="BadExpressionStatementJS" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="CssOverwrittenProperties" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CssUnusedSymbol" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ES6ModulesDependencies" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="HtmlUnknownAnchorTarget" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="HtmlUnknownAttribute" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="myValues">
@@ -34,6 +37,7 @@
     <inspection_tool class="JSUnresolvedFunction" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="JSUnresolvedVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="JSUnusedGlobalSymbols" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="NodeModulesDependencies" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PhpRedundantClosingTagInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="RequiredAttributes" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="myAdditionalRequiredHtmlAttributes" value="" />

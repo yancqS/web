@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-Filter</title>
+    <script src="../JS/vue.js"></script>
+    <script>
+        window.onload = function () {
+            Vue.filter('hidePM',function (input,len=4) {
+                if(len>8 || len<0){
+                    len = 8;
+                    return input.substring(0,3)+''.padStart(len,'*')+input.substring(len+3);
+                }else{
+                    return input.substring(0,3)+''.padStart(len,'*')+input.substring(len+3);
+                }
+            });
+            Vue.filter('date',function (input) {
+                let oDate = new Date(input);
+                return oDate.toLocaleString();
+            });
+            Vue.filter('NFilter',{
+                read:function (input) {
+                    //Model => View
+                    return input+"R";
+                },
+                write:function (newVal,oldVal) {
+                    //View => Model
+                    console.log(newVal,oldVal);
+                    return newVal+"W";
+                }
+            });
+            new Vue({
+                el:"#box",
+                data:{
+                    arr:[{'name':'liming','tel':'17864295476'},{'name':'lixing','tel':'13864295486'},{'name':'zhangming','tel':'15864295496'},{'name':'Hengming','tel':'17667295486'}],
+                    time:Date.now(),
+                    msg:"H"
+                },
+                ready:function () {
+                    setInterval(()=> {
+                        this.time = Date.now();
+                    },1000);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li v-for="item in arr">
+                <h3>{{item.name}}</h3>
+                <span>{{item.tel | hidePM}}</span>
+            </li>
+        </ul>
+        <span>时间:{{time | date}}</span>
+        <div>
+            {{msg}}->{{msg | NFilter}}
+            <input type="text" title="" v-model="msg | NFilter">
+        </div>
+    </div>
+</body>
+</html>

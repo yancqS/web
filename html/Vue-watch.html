@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据监视</title>
+    <script src="../JS/vue.js"></script>
+    <script>
+        window.onload = function () {
+            let vm = new Vue({
+                el:"#box",
+                data:{
+                    msg:"abc",
+                    info:{name:"liming",age:15,job:"teacher"}
+                },
+                watch:{
+                    msg:{
+                        handler:function(val,oldVal){
+                            console.log(oldVal+"==>"+val);
+                        },
+                        deep:true//在处理函数后面添加
+                    }
+                }
+            });
+            vm.$watch("info",function (newVal,oldVal) {
+               //doSomething
+                console.log(newVal);
+                console.log(oldVal);
+                alert("changed");
+            },{deep:true});//{deep:true}在处理函数后面添加,注意花括号
+            document.onclick = function () {
+                vm.info.name = "guiguiha";
+            }
+        }
+    </script>
+</head>
+<body id="box">
+    <input type="text" title="" v-model="msg">
+    <br>
+    {{info | json}}
+</body>
+</html>

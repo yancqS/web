@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-父子组件通信</title>
+    <script src="../JS/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:"#box",
+                components:{
+                    'parent':{
+                        template:"#parent",
+                        data(){
+                          return {
+                              msg:"father",
+                              name:"父joe",
+                              age:"父22"
+                          }
+                        },
+                        methods:{
+                            receive:function (val) {
+                                this.name=val;
+                            }
+                        },
+                        components:{
+                            'child':{
+                                template:'#child',
+                                props:['myName','myAge'],
+                                data(){
+                                    return {
+                                        a:"子son"
+                                    }
+                                },
+                                methods:{
+                                  send:function(){
+                                      this.$emit('event',this.a);
+                                  }
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <parent></parent>
+    </div>
+    <template id="parent">
+        <h2>我是父组件=>{{msg}}--{{name}}</h2>
+        <!--注意:在自定义事件调用处理函数receive时，这个函数不能加括号,如果加了括号子组件中的值传不过去，会显示undefined-->
+        <child :my-name="name" :my-age="age" @event="receive"></child>
+    </template>
+    <template id="child">
+        <h4 @click="send()">我是子组件=>{{myName}}-{{myAge}}</h4>
+    </template>
+</body>
+</html>

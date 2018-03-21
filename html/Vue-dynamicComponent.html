@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-动态组件</title>
+    <style>
+        h1{
+            cursor: pointer;
+        }
+    </style>
+    <script src="../JS/vue.js"></script>
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:"#form",
+                data:{
+                    currentValue:"LCU"
+                },
+                components:{
+                    LCU:{
+                        template:"#LCTem",
+                        data(){
+                            return {
+                                info:{'name':'聊城大学','location':'山东聊城',"level":'非一本高校','VIPschool':'非211高校','SVIPschool':'非985高校'}
+                            }
+                        }
+                    },
+                    QDU:{
+                        template:"#QDTem",
+                        data(){
+                            return {
+                                info:{'name':'青岛大学','location':'山东青岛',"level":'一本高校','VIPschool':'非211高校','SVIPschool':'非985高校'}
+                            }
+                        }
+                    },
+                    PKU:{
+                        template:"#BJTem",
+                        data(){
+                            return {
+                                info:{'name':'北京大学','location':'北京市',"level":'一本高校','VIPschool':'211高校','SVIPschool':'985高校'}
+                            }
+                        }
+                    },
+                    THU:{
+                        template:"#THTem",
+                        data(){
+                            return {
+                                info:{'name':'清华大学','location':'北京市',"level":'一本高校','VIPschool':'211高校','SVIPschool':'985高校'}
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body id="form">
+    <form>
+        <input type="radio" value="LCU" name="CNU" id="LCU" v-model="currentValue">
+        <label for="LCU">聊城大学</label>
+        <input type="radio" value="QDU" name="CNU" id="QDU" v-model="currentValue">
+        <label for="QDU">青岛大学</label>
+        <input type="radio" value="PKU" name="CNU" id="PKU" v-model="currentValue">
+        <label for="PKU">北京大学</label>
+        <input type="radio" value="THU" name="CNU" id="THU" v-model="currentValue">
+        <label for="THU">清华大学</label>
+    </form>
+    <template id="LCTem">
+        <h1>聊城大学</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>地点</th>
+                    <th>一本</th>
+                    <th>211</th>
+                    <th>985</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{info.name}}</td>
+                    <td>{{info.location}}</td>
+                    <td>{{info.level}}</td>
+                    <td>{{info.VIPschool}}</td>
+                    <td>{{info.SVIPschool}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+    <template id="QDTem">
+        <h1>青岛大学</h1>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>地点</th>
+                <th>一本</th>
+                <th>211</th>
+                <th>985</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{info.name}}</td>
+                <td>{{info.location}}</td>
+                <td>{{info.level}}</td>
+                <td>{{info.VIPschool}}</td>
+                <td>{{info.SVIPschool}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </template>
+    <template id="BJTem">
+        <h1>北京大学</h1>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>地点</th>
+                <th>一本</th>
+                <th>211</th>
+                <th>985</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{info.name}}</td>
+                <td>{{info.location}}</td>
+                <td>{{info.level}}</td>
+                <td>{{info.VIPschool}}</td>
+                <td>{{info.SVIPschool}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </template>
+    <template id="THTem">
+        <h1>清华大学</h1>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>地点</th>
+                <th>一本</th>
+                <th>211</th>
+                <th>985</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{info.name}}</td>
+                <td>{{info.location}}</td>
+                <td>{{info.level}}</td>
+                <td>{{info.VIPschool}}</td>
+                <td>{{info.SVIPschool}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </template>
+    <component :is="currentValue"></component>
+</body>
+</html>
