@@ -8,13 +8,14 @@
     <script>
         let app = angular.module('app',['ngRoute']);
         app.controller('main',function(data, $scope){
+            $scope.data = data;
             console.dir(data);
         });
         app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider, $rootScope) {
             $locationProvider.hashPrefix(''); //这是因为Angular 1.6 版本更新后 对路由做的处理，这样才可以和以前版本一样正常使用
             $routeProvider
                 .when('/',{
-                    template:'This is Home',
+                    template:'This is Home{{data}}',
                     controller:'main',
                     resolve:{
                         'data': function($http){

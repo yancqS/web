@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-router</title>
+    <style>
+        .active{
+            font-size: 20px;
+        }
+    </style>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/vue-router0.7.13.js"></script>
+    <script src="../JS/jquery-3.1.1.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <link href="../CSS/bootstrap.css" rel="stylesheet">
+    <link href="../CSS/animate.css" rel="stylesheet">
+    <script>
+        window.onload = function () {
+            Vue.transition("custom",{
+               enterClass:'bounceInDown',
+               leaveClass:'bounceOutRight'
+            });
+            //1.准备一个根组件
+            let App = Vue.extend();
+            //2.准备各路由组件
+            let home = Vue.extend({
+                template:'#home',
+                route:{
+                    canActivate:function (transition) {
+                        setTimeout(transition.next,2000);
+                        console.log('activate');
+                    }
+                }
+            });
+            let news = Vue.extend({
+                template:'#news'
+            });
+            //3.准备一个路由实例
+            let router = new VueRouter({
+                hashbang:false,
+                linkActiveClass:'active',
+                transitionOnLoad:true
+            });
+            //4.定义路由规则
+            //每条路由规则应该映射到一个组件。这里的“组件”可以是一个使用Vue.extend
+            //创建的组件构造函数，也可以是一个组件选项对象
+            router.map({
+                "/home":{
+                    component:home,
+                    subRoutes:{
+                        "/login":{
+                            component:{
+                                template:"#sublogin"
+                            }
+                        },
+                        "/reg":{
+                            component:{
+                                template:"#subreg"
+                            }
+                        }
+                    }
+                },
+                "/news":{
+                    component:news
+                }
+            });
+            //5.启动应用
+            router.start(App,"#app");
+
+            router.redirect({
+                '/':'/news'
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="app">
+        <nav class="navbar navbar-inverse">
+            <ul class="nav navbar-nav">
+                <li v-link="{path:'/home'}"><a href="#">Home</a></li>
+                <li v-link="{path:'/news'}"><a href="#">News</a></li>
+            </ul>
+        </nav>
+
+        <template id="home">
+            <div>
+                <h2>This is a Home Page</h2>
+                <a href="#" class="btn btn-primary" v-link="{path:'/home/reg',query:{a:1}}">注册</a>
+                <a href="#" class="btn btn-danger" v-link="{path:'/home/login'}">登录</a>
+                <router-view transition="custom" transition-mode="out-in" class="animated"></router-view>
+            </div>
+        </template>
+
+        <template id="news">
+            <h2>This is a News Page</h2>
+        </template>
+
+        <template id="sublogin">
+            <form class="row">
+                <div class="form-group" :style="{width:'400px'}">
+                    <label for="username">用户名:</label>
+                    <input title="text" id="username" class="form-control" placeholder="请输入用户名">
+                    <label for="pass">密码:</label>
+                    <input type="password" id="pass" class="form-control" placeholder="请输入密码">
+                </div>
+            </form>
+        </template>
+
+        <template id="subreg">
+            <div class="jumbotron">
+                <h1>Hello,Vue</h1>
+                <p>Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
+                <button class="btn btn-primary btn-lg">Start</button>
+            </div>
+        </template>
+
+        <router-view transition="custom" transition-mode="out-in" class="animated"></router-view>
+    </div>
+</body>
+</html>
