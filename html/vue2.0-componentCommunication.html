@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2.0-componentCommunication</title>
+    <script src="../JS/vue2.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:"#box",
+                data:{
+                    msg:{
+                        sub:"ParentComponent",
+                        recesub:""
+                    }
+                },
+                methods:{
+                  receive:function (val) {
+                      //console.log("good");
+                      this.msg.recesub = val;
+                  }
+                },
+                components:{
+                    'child':{
+                        template:"#child",
+                        props:['info'],
+                        methods:{
+                            change:function () {
+                                this.info.sub = "I have been changed"
+                            },
+                            send:function () {
+                                this.$emit("event",this.childmsg);
+                            }
+                        },
+                        data:function () {
+                            return {
+                                childmsg:"From Child data"
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="text" title="" v-model="msg.sub">
+        <h3>{{msg.sub}}</h3>
+        <child :info="msg" @event="receive"></child>
+        <hr>
+        <p>{{msg.recesub}}</p>
+    </div>
+    <template id="child">
+        <div>
+            <hr>
+            <h3>ChildComponent</h3>
+            <h3>{{info.sub}}</h3>
+            <input type="text" title="" v-model="info.sub">
+            <button type="button" @click="change">CHANGE</button>
+            <button type="button" @click="send">SEND</button>
+        </div>
+    </template>
+</body>
+</html>

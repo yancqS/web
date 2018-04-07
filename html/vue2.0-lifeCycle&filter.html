@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2.0-lifeCycle</title>
+    <script src="../JS/vue2.js"></script>
+    <script>
+        window.onload = function () {
+            Vue.filter("tuDou",function (input,a,b) {
+                console.log(a+"+"+b+"="+(a+b));
+                if(!input && input !== 0) return ;
+                return input>10?""+input:"0"+input;
+            });
+            new Vue({
+                el:"#box",
+                data:{
+                    msg:"This is a infomation",
+                    arr:["apple","banana","origin","cell"],
+                    num:3
+                },
+                methods:{
+                  change:function () {
+                      this.msg = this.msg.split("").reverse().join("");
+                  },
+                  destroy:function () {
+                      this.$destroy();
+                  },
+                  add:function () {
+                      this.arr.push("docter");
+                  }
+                },
+                beforeCreate:function () {
+                    console.log("组件刚刚被创建");
+                },
+                created:function () {
+                    console.log("组件创建完成");
+                },
+                beforeMount:function () {
+                    console.log("模板编译/挂载之前");
+                },
+                mounted:function () {
+                    console.log("模板编译/挂载之后");
+                },
+                beforeUpdate:function () {
+                    console.log("组件更新之前");
+                },
+                updated:function () {
+                    console.log("组件更新之后");
+                },
+                beforeDestroy:function () {
+                    console.log("组件销毁之前");
+                },
+                destroyed:function () {
+                    console.log("组件销毁完毕");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        {{msg}}
+        <button type="button" @click="change">BUTTON</button>
+        <button type="button" @click="destroy">DESTORY</button>
+        <button type="button" @click="add">add</button>
+        <ul>
+            <li v-for="(val,index) in arr">{{val}}-{{index}}</li>
+        </ul>
+        <input type="text" title="" v-model="num">
+        <span>{{num | tuDou(3,4)}}</span>
+    </div>
+</body>
+</html>

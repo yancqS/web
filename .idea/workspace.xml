@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b411ce3c-9e22-48a4-b764-3e405d21d9c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/dist/vue-router.common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/dist/vue-router.esm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/types/index.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/types/router.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/types/vue.d.ts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/README.md" afterPath="$PROJECT_DIR$/JS/node_modules/vue-router/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/dist/vue-router.js" afterPath="$PROJECT_DIR$/JS/node_modules/vue-router/dist/vue-router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/dist/vue-router.min.js" afterPath="$PROJECT_DIR$/JS/node_modules/vue-router/dist/vue-router.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/node_modules/vue-router/package.json" afterPath="$PROJECT_DIR$/JS/node_modules/vue-router/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/angular-ui-router.html" afterPath="$PROJECT_DIR$/html/angular-ui-router.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/angularRoute.html" afterPath="$PROJECT_DIR$/html/angularRoute.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/JS/vue-router.js" afterPath="$PROJECT_DIR$/JS/vue-router3.0.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Vue-ComponentCommunication.html" afterPath="$PROJECT_DIR$/html/Vue-ComponentCommunication.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Vue-Filter.html" afterPath="$PROJECT_DIR$/html/Vue-Filter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Vue-lifeCycle.html" afterPath="$PROJECT_DIR$/html/Vue-lifeCycle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/css隐藏滚动条（保留滑动效果）.html" afterPath="$PROJECT_DIR$/html/css隐藏滚动条（保留滑动效果）.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Vue-router.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/Vue-router.html">
+      <file leaf-file-name="vue2.0-componentCommunication2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/vue2.0-componentCommunication2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            <state relative-caret-position="-642">
+              <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -63,8 +53,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jade File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -78,6 +68,7 @@
       <find>jquery</find>
       <find>var</find>
       <find>zoom</find>
+      <find>filter</find>
     </findStrings>
     <dirStrings>
       <dir>D:\YanProject\php</dir>
@@ -91,11 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/test.jade" />
-        <option value="$PROJECT_DIR$/html/angularFormCheck.html" />
-        <option value="$PROJECT_DIR$/html/customDirective.html" />
-        <option value="$PROJECT_DIR$/www/username.json" />
-        <option value="$PROJECT_DIR$/html/angularCustomFormCheck.html" />
         <option value="$PROJECT_DIR$/html/bootstrapCss.html" />
         <option value="$PROJECT_DIR$/html/bootstrap1.html" />
         <option value="$PROJECT_DIR$/html/bootsrapForm.html" />
@@ -108,7 +94,6 @@
         <option value="$PROJECT_DIR$/html/angularThird.html" />
         <option value="$PROJECT_DIR$/html/canvas6.html" />
         <option value="$PROJECT_DIR$/html/Vue-Example1.html" />
-        <option value="$PROJECT_DIR$/html/VueFirst.html" />
         <option value="$PROJECT_DIR$/html/VurSecond.html" />
         <option value="D:/xampp/php/php.ini" />
         <option value="$PROJECT_DIR$/php/1.php" />
@@ -116,19 +101,15 @@
         <option value="$PROJECT_DIR$/html/angularWeiBo.html" />
         <option value="$PROJECT_DIR$/JS/jade.js" />
         <option value="$PROJECT_DIR$/html/vue-Interaction.html" />
-        <option value="$PROJECT_DIR$/html/Vue-lifeCycle.html" />
         <option value="$PROJECT_DIR$/html/angularFilter.html" />
         <option value="$PROJECT_DIR$/html/Vue-computed.html" />
         <option value="$PROJECT_DIR$/html/Vue-customDirective.html" />
         <option value="$PROJECT_DIR$/html/Vue-watch.html" />
         <option value="$PROJECT_DIR$/html/vue-transition.html" />
         <option value="$PROJECT_DIR$/html/Vue-transition2.html" />
-        <option value="$PROJECT_DIR$/html/Vue-component.html" />
         <option value="$PROJECT_DIR$/html/Vue-dynamicComponent.html" />
-        <option value="$PROJECT_DIR$/html/Vue-ComponentCommunication.html" />
         <option value="$PROJECT_DIR$/html/angularRoute.html" />
         <option value="$PROJECT_DIR$/html/angular-ui-router.html" />
-        <option value="$PROJECT_DIR$/html/Vue-Filter.html" />
         <option value="$PROJECT_DIR$/html/Vue-router.html" />
         <option value="$PROJECT_DIR$/html/Vue-load-demo/main'.js" />
         <option value="$PROJECT_DIR$/html/Vue-load-demo/App.vue" />
@@ -142,6 +123,16 @@
         <option value="$PROJECT_DIR$/html/vue-loader/package.json" />
         <option value="$PROJECT_DIR$/html/vue-loader/webpack.config.js" />
         <option value="$PROJECT_DIR$/channel_v3.json" />
+        <option value="$PROJECT_DIR$/html/css隐藏滚动条（保留滑动效果）.html" />
+        <option value="$PROJECT_DIR$/html/Vue-component.html" />
+        <option value="$PROJECT_DIR$/html/vue2.0-component.html" />
+        <option value="$PROJECT_DIR$/html/VueFirst.html" />
+        <option value="$PROJECT_DIR$/html/Vue-Filter.html" />
+        <option value="$PROJECT_DIR$/html/vue2.0-lifeCycle.html" />
+        <option value="$PROJECT_DIR$/html/vue2.0-componentCommunication.html" />
+        <option value="$PROJECT_DIR$/html/Vue-lifeCycle.html" />
+        <option value="$PROJECT_DIR$/html/Vue-ComponentCommunication.html" />
+        <option value="$PROJECT_DIR$/html/vue2.0-componentCommunication2.html" />
       </list>
     </option>
   </component>
@@ -171,7 +162,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="10" />
     <option name="width" value="1378" />
@@ -211,7 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,11 +214,17 @@
               <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="YanProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="JS" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,15 +244,15 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/YanProject/html/angularFirst1.html" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\YanProject\JS" />
+      <recent name="D:\YanProject" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\YanProject\JS" />
       <recent name="D:\YanProject\CSS" />
       <recent name="D:\YanProject\html" />
       <recent name="D:\YanProject\php" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\YanProject\JS" />
-      <recent name="D:\YanProject" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -270,6 +266,14 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Node.js.vue.js">
+    <configuration name="vue.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="vue.js" working-dir="$PROJECT_DIR$/JS" />
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.vue.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -446,11 +450,24 @@
       <workItem from="1522288445244" duration="10000" />
       <workItem from="1522374427791" duration="2094000" />
       <workItem from="1522379362662" duration="70000" />
+      <workItem from="1522589532934" duration="297000" />
+      <workItem from="1522648424707" duration="4000" />
+      <workItem from="1522648446905" duration="785000" />
+      <workItem from="1522658926217" duration="367000" />
+      <workItem from="1522664886819" duration="137000" />
+      <workItem from="1522667615287" duration="9000" />
+      <workItem from="1522756033797" duration="36000" />
+      <workItem from="1522759936613" duration="13000" />
+      <workItem from="1522821881705" duration="4099000" />
+      <workItem from="1522840204918" duration="2749000" />
+      <workItem from="1522885965205" duration="20303000" />
+      <workItem from="1522972889071" duration="4388000" />
+      <workItem from="1523069838978" duration="455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="843433000" />
+    <option name="totallyTimeSpent" value="877075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,19 +479,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2579425" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25037822" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32840723" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5121029" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32676518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48789713" order="13" side_tool="false" content_ui="tabs" x="483" y="141" width="400" height="445" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3256579" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4555921" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26973686" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22692889" sideWeight="0.5123153" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -568,132 +584,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/angularForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Vue-component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Vue-dynamicComponent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2112">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Vue-ComponentCommunication.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/node_modules/vue-router/dist/vue-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/vue-router3.0.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/angularFirst1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/bootstrapNavbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-768">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="1149" column="30" lean-forward="false" selection-start-line="1149" selection-start-column="30" selection-end-line="1149" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/phrase.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/angularRoute.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/teacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/banners.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/MD5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/template/banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/template/web.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -764,13 +654,6 @@
     <entry file="file://$PROJECT_DIR$/html/vue-loader/package.json" />
     <entry file="file://$PROJECT_DIR$/html/vue-loader/webpack.config.js" />
     <entry file="file://$PROJECT_DIR$/html/del.html" />
-    <entry file="file://$PROJECT_DIR$/html/vue-Interaction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/channel_v3.json" />
     <entry file="file://$PROJECT_DIR$/CSS/animate.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -807,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/Vue-Filter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/angularSecond.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -828,10 +704,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/css隐藏滚动条（保留滑动效果）.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/打不开的/html/制作3D旋转导航.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4512">
+          <caret line="245" column="36" lean-forward="false" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/Vue-router.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
-          <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/weibo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/angularWeiBo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/vue-router0.7.13.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/vue-router3.0.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/vue2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue2.0-component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/VueFirst.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2263">
+          <caret line="9995" column="4" lean-forward="false" selection-start-line="9995" selection-start-column="4" selection-end-line="9995" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-Filter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue2.0-lifeCycle&amp;filter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-lifeCycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue-Interaction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-ComponentCommunication.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="35" column="51" lean-forward="true" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-computed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-customDirective.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2016">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue2.0-componentCommunication.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="61" column="14" lean-forward="true" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue2.0-componentCommunication2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-642">
+          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding />
         </state>
       </provider>

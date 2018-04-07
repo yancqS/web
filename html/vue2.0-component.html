@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2.0-component</title>
+    <script src="../JS/vue2.js"></script>
+    <script>
+        window.onload = function () {
+            let home = {//在vue2.0中，这种方法替代了Vue.extend({}); 但是该注册还是要注册Vue.component()或者局部注册。
+              template:"#home",
+                data(){
+                  return{
+                      msgs:"infomation about Vue"
+                  }
+                }
+            };
+            Vue.component("ycq",{
+                data(){
+                    return {
+                        info:"Vue2.0"
+                    }
+                },
+                template:"#ycq"
+            });
+            new Vue({
+                el:"#box",
+                data:{
+                    msg:"Welcome Vue2.0"
+                },
+                components:{
+                    home
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <ycq></ycq>
+        <home></home>
+        {{msg}}
+    </div>
+    <template id="ycq">
+        <div>
+            <h3>I am a Component=>{{info}}</h3>
+            <strong>加粗标签</strong>
+        </div>
+    </template>
+    <template id="home">
+        <div>
+            <h1>Vue is GOOD</h1>
+            <span>yes it is nice-{{msgs}}</span>
+        </div>
+    </template>
+</body>
+</html>
