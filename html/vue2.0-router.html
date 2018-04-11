@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2.0-router</title>
+    <style>
+        .router-link-active{
+            font-size: 20px;
+            color: #ff6582;
+        }
+    </style>
+    <script src="../JS/vue2.js"></script>
+    <script src="../JS/vue-router3.0.1.js"></script>
+    <script>
+        window.onload = function () {
+            const Home = {
+                template:"#home"
+            };
+            const News = {
+              template:"<h2>News Page</h2>"
+            };
+            const Login = {
+              template:"<h3>Login Information</h3>"
+            };
+            const Reg = {
+              template:"<h3>Reg Information</h3>"
+            };
+            const routes =[
+                {
+                    path:'/Home/:name',
+                    component:Home,
+                    children:[
+                        {
+                            path:'login',
+                            component:Login
+                        },
+                        {
+                            path:'reg',
+                            component:Reg
+                        }
+                    ]
+                },
+                {path:'/News',component:News},
+                {path:'*',redirect:'/Home'}
+            ];
+            const router = new VueRouter({
+                routes
+            });
+            new Vue({
+                router,
+                el:"#box"
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div>
+            <router-link to="/Home">Home</router-link>
+            <router-link to="/News">News</router-link>
+        </div>
+        <div>
+            <router-view></router-view>
+        </div>
+    </div>
+    <template id="home">
+        <div>
+            <h2>HomePage</h2>
+            <router-link to="/Home/login">登录</router-link>
+            <router-link to="/Home/reg">注册</router-link>
+            <router-view></router-view>
+        </div>
+    </template>
+</body>
+</html>
