@@ -11,8 +11,10 @@
     </style>
     <script src="../JS/vue2.js"></script>
     <script src="../JS/vue-router3.0.1.js"></script>
+    <link href="../CSS/animate.css" rel="stylesheet">
     <script>
         window.onload = function () {
+            //定义路由组件
             const Home = {
                 template:"#home"
             };
@@ -20,18 +22,19 @@
               template:"<h2>News Page</h2>"
             };
             const Login = {
-              template:"<h3>Login Information</h3>"
+              template:"<h3>Login Information=>{{$route.params.id}}</h3>"
             };
             const Reg = {
               template:"<h3>Reg Information</h3>"
             };
+            //定义路由规则(相当于以前的map)
             const routes =[
                 {
-                    path:'/Home/:name',
+                    path:'/Home',
                     component:Home,
-                    children:[
+                    children:[//定义嵌套路由,相当于subroutes
                         {
-                            path:'login',
+                            path:'login/:id',
                             component:Login
                         },
                         {
@@ -43,13 +46,14 @@
                 {path:'/News',component:News},
                 {path:'*',redirect:'/Home'}
             ];
+            //创建路由实例
             const router = new VueRouter({
                 routes
             });
+            //创建和挂载根实例
             new Vue({
-                router,
-                el:"#box"
-            });
+                router
+            }).$mount("#box");
         }
     </script>
 </head>
@@ -60,15 +64,19 @@
             <router-link to="/News">News</router-link>
         </div>
         <div>
-            <router-view></router-view>
+            <transition enter-active-class="rubberBand" leave-active-class="bounce">
+                <router-view class="animated"></router-view>
+            </transition>
         </div>
     </div>
     <template id="home">
         <div>
             <h2>HomePage</h2>
-            <router-link to="/Home/login">登录</router-link>
+            <router-link to="/Home/login/liming">登录</router-link>
             <router-link to="/Home/reg">注册</router-link>
-            <router-view></router-view>
+            <transition enter-active-class="bounceInDown" leave-active-class="bounceOutUp">
+                <router-view class="animated"></router-view>
+            </transition>
         </div>
     </template>
 </body>

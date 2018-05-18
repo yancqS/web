@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b411ce3c-9e22-48a4-b764-3e405d21d9c3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/bootstrap-Carousel.html" afterPath="$PROJECT_DIR$/html/bootstrap-Carousel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/vue2.0-router.html" afterPath="$PROJECT_DIR$/html/vue2.0-router.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,28 +34,7 @@
     <favorites_list name="YanProject" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="vue2.0-router.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/vue2.0-router.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-426">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vue-router.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/Vue-router.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="984">
-              <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,12 +69,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/bootstrap-button.html" />
         <option value="$PROJECT_DIR$/html/bootstrapComponent-dropDown.html" />
         <option value="$PROJECT_DIR$/html/bootstrapNavbar.html" />
         <option value="$PROJECT_DIR$/html/bootstrap-JS-Plugin.html" />
         <option value="$PROJECT_DIR$/html/bootstrap-Scroll.html" />
-        <option value="$PROJECT_DIR$/html/bootstrap-Carousel.html" />
         <option value="$PROJECT_DIR$/html/angularThird.html" />
         <option value="$PROJECT_DIR$/html/canvas6.html" />
         <option value="$PROJECT_DIR$/html/Vue-Example1.html" />
@@ -139,6 +118,8 @@
         <option value="$PROJECT_DIR$/html/vue2.0-transition.html" />
         <option value="$PROJECT_DIR$/html/vue2.0-transition2.html" />
         <option value="$PROJECT_DIR$/html/vue2.0-router.html" />
+        <option value="$PROJECT_DIR$/html/bootstrap-Carousel.html" />
+        <option value="$PROJECT_DIR$/html/vue-ElementUI.html" />
       </list>
     </option>
   </component>
@@ -209,6 +190,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,16 +198,10 @@
               <item name="YanProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="YanProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -472,12 +448,18 @@
       <workItem from="1523339742053" duration="272000" />
       <workItem from="1523340035581" duration="28000" />
       <workItem from="1523340152918" duration="3448000" />
-      <workItem from="1523432017236" duration="2547000" />
+      <workItem from="1523432017236" duration="5095000" />
+      <workItem from="1523523384594" duration="2567000" />
+      <workItem from="1523590107984" duration="704000" />
+      <workItem from="1523599365244" duration="235000" />
+      <workItem from="1523608813699" duration="1647000" />
+      <workItem from="1523859351413" duration="387000" />
+      <workItem from="1524812038537" duration="480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="902746000" />
+    <option name="totallyTimeSpent" value="911314000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,7 +473,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28668684" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22919819" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32840723" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5121029" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -594,30 +576,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JS/template/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/template/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/learner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/Vue-load-demo/npm-debug.log" />
-    <entry file="file://$PROJECT_DIR$/html/Vue-load-demo/index.html" />
-    <entry file="file://$PROJECT_DIR$/html/Vue-load-demo/App.vue" />
     <entry file="file://$PROJECT_DIR$/html/Vue-load-demo/main.js" />
     <entry file="file://$PROJECT_DIR$/html/Vue-load-demo/webpack.config.js" />
     <entry file="file://$PROJECT_DIR$/html/Vue-load-demo/package.json" />
@@ -823,9 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,25 +798,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/vue2.0-transition2.html">
+    <entry file="file://$PROJECT_DIR$/html/Vue-router.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="24">
+          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/Vue-router.html">
+    <entry file="file://$PROJECT_DIR$/html/双向绑定.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="480">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/vue2.0-router.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-426">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        <state relative-caret-position="1608">
+          <caret line="67" column="45" lean-forward="false" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue2.0-transition2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="47" column="7" lean-forward="false" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/videoPlayer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1760">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-Example1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-704">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue-ElementUI.html" />
+    <entry file="file://$PROJECT_DIR$/html/bootstrap-Carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="57" column="23" lean-forward="false" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding>
+            <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/angularRoute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding />
         </state>
       </provider>
