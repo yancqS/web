@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest</title>
+    <script>
+        window.onload = function () {
+            let oBtn = document.getElementById("btn1");
+            oBtn.onclick = function () {
+                //alert("OK");
+                let request = new XMLHttpRequest();
+                request.open('get','../www/data.txt',true);
+                request.send(null);
+                request.onreadystatechange = function () {
+                    if(request.readyState === 4){
+                        if((request.status >= 200 &&request.status < 300) || request.status === 304){
+                            alert(request.responseText);
+                        }else{
+                            alert("Request was unsuccessful :"+request.status);
+                        }
+                    }
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" title="" id="btn1">
+</body>
+</html>

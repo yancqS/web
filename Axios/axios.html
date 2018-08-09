@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>axios</title>
+    <script src="../JS/vue2.js"></script>
+    <script src="../JS/axios.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: "#app",
+                created() {
+                    axios.get('../www/data.txt')
+                        .then((res) => {
+                            this.arr = res.data;
+                        })
+                        .catch(() => {
+                            console.log("error");
+                        })
+                },
+                data: {
+                    arr: []
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in arr">{{item}}</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,8 +1,4 @@
 @charset "utf-8";
-/*
-智能社:微博ajax接口测试 
-日期：2013年3月29日
-*/
 /*页面清零*/
 body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
 body{font-size:12px; font-family:"Microsoft YaHei";}
@@ -119,7 +115,7 @@ a {outline:none;}
 	height:37px;
 	border:none 0;
 	background:tranparent;
-	background:url(../img/takeSbmComment.png) left top no-repeat;
+	background:url(../image/takeSbmComment.png) left top no-repeat;
 	cursor:pointer;
 	opacity:.8;
 }

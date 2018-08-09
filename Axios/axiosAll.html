@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>axiosAll</title>
+    <script src="../JS/axios.js"></script>
+    <script>
+        window.onload = function () {
+            /*axios.all([
+                axios.get('../www/data.txt'),
+                axios.get('../www/username.json')
+            ]).then(axios.spread((res1,res2)=>{
+                console.log(res1.data,res2.data);
+            })).catch(err => {
+                    console.log(err);
+                });*/
+            let instance = axios.create();
+            console.log(instance.defaults);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

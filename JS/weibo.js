@@ -16,7 +16,7 @@ const mysql = require('mysql');//操作mysql数据库
 
 let server = express();//启动服务器
 server.listen(8888);//监听端口
-//链接数据库
+//连接数据库
 const db = mysql.createPool({host:'localhost',user:'root',password:'YANchongqing.910',database:'weibo'});
 //响应访问/page 接口
 server.use('/page',(req,res)=>{

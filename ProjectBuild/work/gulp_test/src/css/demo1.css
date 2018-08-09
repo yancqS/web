@@ -1,0 +1,11 @@
+div{
+    width:200px;
+    height: 200px;
+    font-size: 20px;
+    font-family: "Adobe 黑体 Std R";
+    border: 1px solid #0f0f0f;
+    border-radius: 10px;
+    box-shadow: 3px 5px gray;
+    float: left;
+    margin: 20px;
+}

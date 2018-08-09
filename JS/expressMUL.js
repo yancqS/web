@@ -13,7 +13,7 @@ const cookieSession = require('cookie-session');
 const pathLib = require('path');
 
 let server = express();
-server.listen(8888);
+server.listen(8080);
 //解析post数据
 server.use(bodyParser.urlencoded({extended:false}));
 //解析cookie
@@ -34,7 +34,7 @@ server.use(multer({dest:"../www/upload/"}).any());
 server.use('/',function(req,res){
 	res.cookie('user','Yan',{path:'/'});
 	//console.log(req.query,req.body,req.cookies,req.session);
-	//console.log(req.files);获取上传文件信息
+	//console.log(req.files);//获取上传文件信息
 	//1.获取原始的文件名(可以看path.js)
 	let newname = req.files[0].path+pathLib.parse(req.files[0].originalname).ext;
     //2.重命名 
@@ -50,7 +50,7 @@ server.use('/',function(req,res){
  });
 //静态数据
 server.use(expressStatic('../www'));
-console.log("success run at localhost:8888");
+console.log("success run at localhost:8080");
 /*
 body-parser	解析post数据	application/x-www-form-urlencoded
 server.use(bodyParse.urlencode());

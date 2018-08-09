@@ -1,7 +1,7 @@
 //实验path模块
 const pathLib = require('path');
 
-let str = 'E:\\jiaoben4869\\js\\demo.js';
+let str = 'E:\\jiaoben4869\\js\\Axios.js';
 
 let obj = pathLib.parse(str);
 //base 文件名部分+扩展名
@@ -11,6 +11,6 @@ let obj = pathLib.parse(str);
 console.log(obj);
 /*{root:'E:\\',
    dir:'E:\\jiaoben4869\\js',
-   base:'demo.js',
+   base:'Axios.js',
    ext:'.js',
-   name:'demo'}*/
+   name:'Axios'}*/

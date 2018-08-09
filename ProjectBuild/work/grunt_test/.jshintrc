@@ -1,0 +1,22 @@
+{
+  "curly": true,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true,
+  "node":true,
+  "browser": true,
+  "bitwise": false,
+  "asi":false,
+  "esversion":6,
+  "globals": {
+    "jQuery": true,
+    "define": true,
+    "module": true,
+    "export": true,
+    "console": true,
+    "THREE": true,
+    "TWEEN": true,
+    "Stats":true,
+    "alert":true
+  }
+}

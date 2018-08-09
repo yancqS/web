@@ -16,26 +16,27 @@
 	   </div>
        <script>
 		 window.onload=function(){
-		  var box=document.getElementById("box");
+		  let box=document.getElementById("box");
 		  box.ondragenter=function(e){
-		  e.preventDefault();
-		  }
+		  		e.preventDefault();
+		  };
 		  box.ondragover=function(e){
-		  box.innerHTML="请松开";
-		  e.preventDefault();
-		  }
+		  		box.innerHTML="请松开";
+		  		e.preventDefault();
+		  };
 		  box.ondragleave=function(e) {
-		   box.innerHTML="请拖入上传的文件";
-		  e.preventDefault();
-		  }
+		   		box.innerHTML="请拖入上传的文件";
+		  		e.preventDefault();
+		  };
 		  box.ondrop=function(e){
-		  var file=e.dataTransfer.files[0];
-		  var formData=new FormData();
-          formData.append("Dfile",file);
-		  var xhr=new XMLHttpRequest();
-		  xhr.open("post","http://localhost:8080/ajaxdemo/php/ajaxdrag.php",true);
-		  xhr.send(formData);
-          e.preventDefault();
+		  		let file=e.dataTransfer.files[0];
+		  		//console.log(file.name);
+		  		let formData=new FormData();
+          		formData.append("Dfile",file);
+		  		let xhr=new XMLHttpRequest();
+		  		xhr.open("post","http://localhost:8888/YanProject/php/ajaxdrag.php",true);
+		  		xhr.send(formData);
+          		e.preventDefault();
 		  }
 		 }
 		</script>
