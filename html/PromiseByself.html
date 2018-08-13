@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise</title>
+</head>
+<body>
+
+<script>
+    class myPromise {
+        constructor (executor) {
+            this.status = PENDING;
+            this.value = '';
+            this.onfulfilledArr = [];
+            this.onrejectedArr = [];
+            this.resolve = this.resolve.bind(this);
+            this.reject = this.reject.bind(this);
+            this.then = this.then.bind(this);
+            executor(this.resolve, this.reject);
+        }
+
+        resolve (value) {
+            if (this.status === PENDING) {
+                this.value = value;
+                this.onfulfilledArr.forEach(item => {
+                    item(this.value);
+                });
+                this.status = FULFILLED;
+            }
+        }
+
+        reject (value) {
+            if (this.status === PENDING) {
+                this.value = value;
+                this.onrejectedArr.forEach(item => {
+                    item(this.value);
+                });
+                this.status = REJECTED;
+            }
+        }
+
+        then (onfulfilled, onrejected) {
+            if (this.status === FULFILLED) {
+                const res = onfulfilled(this.value);
+                return new Promise(function(resolve, reject) {
+                    resolve(res);
+                })
+            }
+            if (this.status === REJECTED) {
+                const res = onrejected(this.value);
+                return new Promise(function(resolve, reject) {
+                    reject(res);
+                })
+            }
+            if (this.status === PENDING) {
+                const self = this;
+                return new Promise(function(resolve, reject) {
+                    self.onfulfilledArr.push(() => {
+                        const res = onfulfilled(self.value);
+                        resolve(res);
+                    });
+                    self.onrejectedArr.push(() => {
+                        const res = onrejected(self.value);
+                        reject(res);
+                    });
+                })
+            }
+        }
+    }
+
+    const PENDING = 'pending';
+    const FULFILLED = 'fulfilled';
+    const REJECTED = 'rejected';
+
+    const test = new myPromise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(100);
+        }, 2000)
+    });
+    test.then((data) => {
+        console.log(data);
+        return data + 5;
+    },(data) => {})
+        .then((data) => {
+            console.log(data)
+        },(data) => {});
+</script>
+</body>
+</html>

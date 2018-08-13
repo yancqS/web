@@ -28,7 +28,7 @@ server.use('/page',(req,res)=>{
           if(req.query.content!=='undefined'&&req.query.content!==''){
               db.query(`INSERT INTO comment_table (content,time) VALUE ('${req.query.content}','${dataTime}')`,(err,data)=>{
                   if(err){
-                      res.status(500).send('database error').end();
+                      res.status(500).send('databasess error').end();
                   }else{
                       //查询页面数据并返回给客户端
                       db.query(`SELECT * FROM comment_table ORDER BY time DESC`,(err,data)=>{

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banner轮播图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            width:400px;
+            height:300px;
+            margin:20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            position: absolute;
+        }
+        .control{
+            position: absolute;
+            bottom:0;
+            left:50%;
+            transform:translate(-50%);
+            z-index: 999;
+            list-style: none;
+        }
+        .control li{
+            width: 12px;
+            height: 12px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .active{
+            background: red;
+        }
+        .display{
+            width:8000px;
+            height:100%;
+            position:absolute;
+            left:0;
+        }
+        .display a{
+            float:left;
+        }
+        #btn a{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            opacity: 0.5;
+            cursor: pointer;
+            border-radius: 50%;
+            width:50px;
+            height:50px;
+        }
+        #btn a:hover{
+            opacity:0.8;
+        }
+        #btn #next{
+            position: absolute;
+            right:5%;
+        }
+        #btn #up{
+            position: absolute;
+            left:5%;
+        }
+        .display img{
+            width:400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="con">
+        <div class="display" id="dis">
+            <a href="#"><img src="../image/image1.jpg"></a>
+            <a href="#"><img src="../image/image2.jpg"></a>
+            <a href="#"><img src="../image/image3.jpg"></a>
+            <a href="#"><img src="../image/image4.jpg"></a>
+            <a href="#"><img src="../image/image5.jpg"></a>
+        </div>
+        <ul class="control" id="contr">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="btn">
+            <a  id="up" style="background: url('../image/prev.png')"></a>
+            <a  id="next" style="background: url('../image/next.png')"></a>
+        </div>
+    </div>
+    <script>
+        let next=document.getElementById("next");
+        let pre=document.getElementById("up");
+        let dis=document.getElementById("dis");
+        let imgCount=dis.getElementsByTagName("img");
+        let countMove=imgCount.length*-400;
+        let container=document.getElementById("con");
+        let ul=document.getElementById("contr");
+        let list=ul.getElementsByTagName("li");
+        let timer;
+        let index=0;//list下标 从0开始！
+        //console.log(countMove);
+        let move=0;//定义变量用保存偏移的值;
+        //设置next下一张点击事件
+        let nextImage = function(){
+            move-=400;//每点击一次偏移-400PX; 第一张图后style.left都为负值。
+            if(move===countMove){//如果偏移（move）等于countMove(2000),就move为0（0是第一张）
+                move=0;
+                index=0;
+            }else {
+                index+=1;
+            }
+            dis.style.transform="translateX("+move+"px"+")";
+            dis.style.transition="all ease 1s";
+            circle(index);//切换相对应圆点
+        };
+        //设置up上一张点击事件
+        let preImage = function(){
+            if(index > 0){
+                index-=1;
+            }else{
+                index=list.length-1;
+            }
+            if(move===0){ //如果偏移（move）等于0,就move为countMove(2000);
+                move=countMove;
+                index=list.length-1;
+            }
+            move+=400;
+            dis.style.transform="translateX("+move+"px"+")";
+            dis.style.transition="all ease 1s";
+            circle(index);//切换相对应圆点
+        };
+        next.addEventListener("click",nextImage,false);
+        pre.addEventListener("click",preImage,false);
+        //设置轮播事件
+        function play(){
+            timer=setInterval("nextImage()",2000)
+        }
+        play();//加载JS自动轮播！
+        //设置暂停轮播事件
+        function stop(){
+            clearInterval(timer);//移除定时器
+        }
+        container.onmouseout=play;//当鼠标移出轮播图区域执行自动轮播事件
+        container.onmouseover=stop;//当鼠标移入轮播图区域执行暂停轮播事件
+        //设置圆点和图片同步切换的事件
+        function circle(index){
+            for(let i=0; i<list.length;i++){//for循环语句 循环所有圆点
+                list[i].className="";
+            }
+            list[index].className="active";//list下标为index 设置Calss为cative;
+        }
+        for(let i=0; list.length>i;i++){ //for循环语句 循环所有圆点
+                list[i].onclick=function(){ //圆点点击事件
+                    dis.style.transform="translateX("+i*-400+"px"+")";
+                    dis.style.transition="all ease 1s";
+                    index=i;
+                    circle();
+                }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -6,63 +6,63 @@
     <link href="../CSS/weibo.css" rel="stylesheet" type="text/css"/>
     <script src="../JS/angular.js"></script>
     <script>
-        let app = angular.module('app',[]);
-        app.controller('main',function($scope,$http){
-            $scope.arr=[];
-            $scope.pages_num=[];
+        let app = angular.module('app', []);
+        app.controller('main', function ($scope, $http) {
+            $scope.arr = [];
+            $scope.pages_num = [];
             //添加
-            $scope.addMeg=function(){
-                $http.get(`/page?act=add&content=${$scope.content}`).then(res=>{
+            $scope.addMeg = function () {
+                $http.get(`/page?act=add&content=${$scope.content}`).then(res => {
                     $scope.arr = res.data;
-                    $scope.content='';
+                    $scope.content = '';
                     $scope.getPage(1);
-                },err=>{
+                }, err => {
                     alert('error');
                 });
             };
             //获取页数
-            $scope.get_page_count = function(){
-                $http.get('/page?act=get_page_count').then(res=>{
-                    for(let i=1;i<=res.data;i++){
+            $scope.get_page_count = function () {
+                $http.get('/page?act=get_page_count').then(res => {
+                    for (let i = 1; i <= res.data; i++) {
                         $scope.pages_num.push(i);
                     }
-                },err=>{
+                }, err => {
                     alert('error_page');
                 });
             };
             $scope.get_page_count();
             //获取页面数据
-             $scope.getPage= function(n){
-                 $scope.now =n;
-                $http.get(`/page?act=get&page=${n}`).then(res=>{
+            $scope.getPage = function (n) {
+                $scope.now = n;
+                $http.get(`/page?act=get&page=${n}`).then(res => {
                     $scope.arr = res.data;
-                },err=>{
+                }, err => {
                     alert('error');
                 });
             };
             $scope.getPage(1);
             //赞
-            $scope.acc = function(ID,nP){
-                $http.get(`/page?act=acc&ID=${ID}`).then(res=>{
+            $scope.acc = function (ID, nP) {
+                $http.get(`/page?act=acc&ID=${ID}`).then(res => {
                     $scope.arr = res.data;
                     $scope.getPage(nP);
-                },err=>{
+                }, err => {
                     alert('error');
                 });
             };
-            $scope.ref = function(ID,nP){
-                $http.get(`/page?act=ref&ID=${ID}`).then(res=>{
+            $scope.ref = function (ID, nP) {
+                $http.get(`/page?act=ref&ID=${ID}`).then(res => {
                     $scope.arr = res.data;
                     $scope.getPage(nP);
-                },err=>{
+                }, err => {
                     alert("error");
                 });
             };
-            $scope.del = function(ID,nP){
-                $http.get(`/page?act=del&ID=${ID}`).then(res=>{
+            $scope.del = function (ID, nP) {
+                $http.get(`/page?act=del&ID=${ID}`).then(res => {
                     $scope.arr = res.data;
                     $scope.getPage(nP);
-                },err=>{
+                }, err => {
                     alert('error');
                 });
             }
@@ -82,7 +82,8 @@
     <!--已留-->
     <div class="commentOn">
         <div class="page">
-            <a ng-repeat="pages in pages_num" class="{{pages===now?'active':''}}" ng-click="getPage(pages)">{{pages}}</a>
+            <a ng-repeat="pages in pages_num" class="{{pages===now?'active':''}}"
+               ng-click="getPage(pages)">{{pages}}</a>
         </div>
         <div class="messList" id="msg_box">
             <div class="reply" ng-repeat="json in arr">

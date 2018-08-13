@@ -7,33 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b411ce3c-9e22-48a4-b764-3e405d21d9c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/class.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/student.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JS/teacher.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/upload/0eb3a6752b87ead7f70a6899f7145a09.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/YanProject.iml" afterPath="$PROJECT_DIR$/.idea/YanProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/demo.css" afterPath="$PROJECT_DIR$/CSS/demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS/weibo_bak.css" afterPath="$PROJECT_DIR$/CSS/weibo_bak.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/angular.js" afterPath="$PROJECT_DIR$/JS/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/expressMUL.js" afterPath="$PROJECT_DIR$/JS/expressMUL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/node_modules/.npminstall.done" afterPath="$PROJECT_DIR$/JS/node_modules/.npminstall.done" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/node_modules/angular/angular.js" afterPath="$PROJECT_DIR$/JS/node_modules/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/path.js" afterPath="$PROJECT_DIR$/JS/path.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JS/weibo.js" afterPath="$PROJECT_DIR$/JS/weibo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Promise.html" afterPath="$PROJECT_DIR$/html/Promise.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/ajaxdemo.html" afterPath="$PROJECT_DIR$/html/ajaxdemo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/canvas之万花筒.html" afterPath="$PROJECT_DIR$/html/canvas之万花筒.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/upload.html" afterPath="$PROJECT_DIR$/html/upload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/ajaxdrag.php" afterPath="$PROJECT_DIR$/php/ajaxdrag.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/get.php" afterPath="$PROJECT_DIR$/php/get.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/post.php" afterPath="$PROJECT_DIR$/php/post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/server.php" afterPath="$PROJECT_DIR$/php/server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/serverjson2.php" afterPath="$PROJECT_DIR$/php/serverjson2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Vue-Example1.html" afterPath="$PROJECT_DIR$/html/Vue-Example1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/angularWeiBo.html" afterPath="$PROJECT_DIR$/html/angularWeiBo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/videoPlayer.html" afterPath="$PROJECT_DIR$/html/videoPlayer.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,64 +39,36 @@
     <favorites_list name="YanProject" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="browser-ch.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/InterviewMap-master/Browser/browser-ch.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SECOND">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding>
-                  <marker date="1533212114000" expanded="true" signature="1672:1694" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="1743:1766" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="2275:2331" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="2410:2433" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="2515:2584" ph="..." />
-                  <marker date="1533212114000" expanded="true" signature="2593:2719" ph="..." />
-                  <marker date="1533212114000" expanded="true" signature="2676:2709" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="3079:3106" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="3269:3513" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="3439:3473" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="3569:3598" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="4168:4307" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="4270:4305" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="4659:4691" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="5020:5052" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="5084:5128" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="5146:5176" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="5194:5224" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="7342:7376" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="7401:7437" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="7439:7564" ph="//..." />
-                  <marker date="1533212114000" expanded="true" signature="7649:7785" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="7672:7711" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="7740:7781" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="7788:7923" ph="//..." />
-                  <marker date="1533212114000" expanded="true" signature="8002:8111" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="8069:8108" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="8132:8241" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="8199:8238" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="8247:8414" ph="//..." />
-                  <marker date="1533212114000" expanded="true" signature="8492:8594" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="8556:8590" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="8624:8654" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10125:10338" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10209:10258" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10285:10334" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10339:10376" ph="//..." />
-                  <marker date="1533212114000" expanded="true" signature="10415:10555" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10481:10547" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10559:10601" ph="//..." />
-                  <marker date="1533212114000" expanded="true" signature="10638:10814" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10709:10806" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="10731:10765" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="13156:13280" ph="..." />
-                  <marker date="1533212114000" expanded="true" signature="13167:13270" ph="{...}" />
-                  <marker date="1533212114000" expanded="true" signature="13291:13411" ph="..." />
-                  <marker date="1533212114000" expanded="true" signature="13313:13393" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PromiseByself.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/PromiseByself.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1296">
+              <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dragCheck.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/dragCheck.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="89" column="44" lean-forward="false" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="banner.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/banner.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1392">
+              <caret line="115" column="25" lean-forward="true" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,9 +79,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jade File" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -145,9 +95,10 @@
       <find>jquery</find>
       <find>zoom</find>
       <find>filter</find>
-      <find>var</find>
       <find>image</find>
       <find>live</find>
+      <find>let</find>
+      <find>var</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -166,23 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/moduleATguigu/commonJS-browserify/js/src/module3.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/commonJS-browserify/js/src/app.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/commonJS-browserify/index.html" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/NO_AMD/alert.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/NO_AMD/dataService.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/NO_AMD/js/alert.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/NO_AMD/app.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/NO_AMD/index.html" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/requireJS/js/modules/dataService.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/requireJS/js/modules/alert.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/requireJS/js/main.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/AMD-requireJS/requireJS/index.html" />
-        <option value="$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/main.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module4.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module1.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module2.js" />
-        <option value="$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module3.js" />
         <option value="$PROJECT_DIR$/moduleATguigu/CMD_seaJS/index.html" />
         <option value="$PROJECT_DIR$/moduleATguigu/ES6_Bable_Browserify/package.json" />
         <option value="$PROJECT_DIR$/moduleATguigu/ES6_Bable_Browserify/.babelrc" />
@@ -217,6 +151,23 @@
         <option value="$PROJECT_DIR$/ProjectBuild/work/gulp_test/src/css/demo1.css" />
         <option value="$PROJECT_DIR$/ProjectBuild/work/gulp_test/package.json" />
         <option value="$PROJECT_DIR$/ProjectBuild/work/gulp_test/gulpfile.babel.js" />
+        <option value="$PROJECT_DIR$/html/angularWeiBo.html" />
+        <option value="$PROJECT_DIR$/html/videoPlayer.html" />
+        <option value="$PROJECT_DIR$/html/vue-Interaction.html" />
+        <option value="$PROJECT_DIR$/JS/weibo.js" />
+        <option value="$PROJECT_DIR$/JS/tdList.js" />
+        <option value="$PROJECT_DIR$/html/Vue-Example1.html" />
+        <option value="$PROJECT_DIR$/html/boxMode.html" />
+        <option value="$PROJECT_DIR$/html/drag.html" />
+        <option value="$PROJECT_DIR$/JS/drag.js" />
+        <option value="$PROJECT_DIR$/CSS/drag.css" />
+        <option value="$PROJECT_DIR$/html/del.html" />
+        <option value="$PROJECT_DIR$/html/lifeCircle-Vue2.html" />
+        <option value="$PROJECT_DIR$/html/PromiseByself.html" />
+        <option value="$PROJECT_DIR$/html/dragCheck.html" />
+        <option value="$USER_HOME$/Desktop/立体轮播图/banner图.html" />
+        <option value="$PROJECT_DIR$/html/d.html" />
+        <option value="$PROJECT_DIR$/html/banner.html" />
       </list>
     </option>
   </component>
@@ -250,9 +201,9 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-94" />
+    <option name="y" value="37" />
     <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
@@ -300,13 +251,7 @@
             <path>
               <item name="YanProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="InterviewMap-master" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="YanProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YanProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="InterviewMap-master" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Browser" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -327,26 +272,26 @@
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="SCSS&#10;ECMAScript 6" />
-    <property name="last_opened_file_path" value="D:/javascript-algorithms-master" />
+    <property name="last_opened_file_path" value="D:/wherego" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/YanProject/html/angularFirst1.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\YanProject\ProjectBuild\work\gulp_test\src\css" />
-      <recent name="D:\YanProject\moduleATguigu\ES6_Bable_Browserify\js\src" />
-      <recent name="D:\YanProject\moduleATguigu\AMD-requireJS\requireJS\js\libs" />
-      <recent name="D:\YanProject\JS" />
-      <recent name="D:\YanProject\html" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\YanProject\moduleATguigu\CMD_seaJS\js\libs" />
       <recent name="D:\YanProject\moduleATguigu\AMD-requireJS\requireJS\js\libs" />
       <recent name="D:\YanProject\moduleATguigu\AMD-requireJS\NO_AMD\js" />
       <recent name="D:\YanProject\moduleATguigu\commonJS-browserify\js" />
       <recent name="D:\YanProject\moduleATguigu\modular" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\YanProject\image" />
+      <recent name="D:\YanProject\JS" />
+      <recent name="D:\YanProject\ProjectBuild\work\gulp_test\src\css" />
+      <recent name="D:\YanProject\moduleATguigu\ES6_Bable_Browserify\js\src" />
+      <recent name="D:\YanProject\moduleATguigu\AMD-requireJS\requireJS\js\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -613,11 +558,26 @@
       <workItem from="1533307465125" duration="156000" />
       <workItem from="1533815029791" duration="299000" />
       <workItem from="1533815616953" duration="96000" />
+      <workItem from="1533825670657" duration="2131000" />
+      <workItem from="1533889876538" duration="98000" />
+      <workItem from="1533890566080" duration="115000" />
+      <workItem from="1533892685532" duration="2616000" />
+      <workItem from="1533906983633" duration="313000" />
+      <workItem from="1533949863477" duration="2795000" />
+      <workItem from="1533954073403" duration="10270000" />
+      <workItem from="1533973379632" duration="3939000" />
+      <workItem from="1533977976935" duration="2519000" />
+      <workItem from="1533988362751" duration="6996000" />
+      <workItem from="1534037789794" duration="567000" />
+      <workItem from="1534049688788" duration="5616000" />
+      <workItem from="1534061124173" duration="10207000" />
+      <workItem from="1534079036159" duration="1405000" />
+      <workItem from="1534141956209" duration="21183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1061637000" />
+    <option name="totallyTimeSpent" value="1132407000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,16 +589,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2118003" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20347957" sideWeight="0.48768473" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32840723" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5121029" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48789713" order="13" side_tool="false" content_ui="tabs" x="483" y="141" width="400" height="445" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45723686" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34210527" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22692889" sideWeight="0.5123153" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -734,341 +695,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/AMD-requireJS/requireJS/js/modules/dataService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/CMD_seaJS/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/module1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/CMD_seaJS/js/modules/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/modular/test4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/modular/module4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/grunt_test/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/src/js/demo1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/src/js/demo2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/dist/js/build.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/grunt_test/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/grunt_test/src/css/demo1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/grunt_test/src/css/demo2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/src/less/demo3.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/dist/css/build.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/src/css/demo2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/src/css/demo3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/src/css/demo1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/ES6_Bable_Browserify/js/build/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6768">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/ES6_Bable_Browserify/js/libs/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/modular/test1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/AMD-requireJS/requireJS/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/dist/css/build.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/commonJS-node/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/commonJS-browserify/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/commonJS-browserify/js/dist/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/commonJS-browserify/js/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/grunt_test/.jshintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/gulp_test/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/ES6_Bable_Browserify/js/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/ES6_Bable_Browserify/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moduleATguigu/ES6_Bable_Browserify/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectBuild/work/grunt_test/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="75" column="54" lean-forward="true" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InterviewMap-master/image/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031382f332f32382f313632366231653865626136386531633f773d3137373026683d37323226663d706e6726733d313932323737.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InterviewMap-master/Safety/safety-en.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InterviewMap-master/JS/JS-ch.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InterviewMap-master/Safety/safety-cn.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InterviewMap-master/Network/Network-zh.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-3456">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InterviewMap-master/Career/How-to-use-your-time-correctly.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/InterviewMap-master/Algorithm/algorithm-ch.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
@@ -1108,57 +734,307 @@
         <state split_layout="SECOND">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1533212114000" expanded="true" signature="1672:1694" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="1743:1766" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="2275:2331" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="2410:2433" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="2515:2584" ph="..." />
-              <marker date="1533212114000" expanded="true" signature="2593:2719" ph="..." />
-              <marker date="1533212114000" expanded="true" signature="2676:2709" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="3079:3106" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="3269:3513" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="3439:3473" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="3569:3598" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="4168:4307" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="4270:4305" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="4659:4691" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="5020:5052" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="5084:5128" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="5146:5176" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="5194:5224" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="7342:7376" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="7401:7437" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="7439:7564" ph="//..." />
-              <marker date="1533212114000" expanded="true" signature="7649:7785" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="7672:7711" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="7740:7781" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="7788:7923" ph="//..." />
-              <marker date="1533212114000" expanded="true" signature="8002:8111" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="8069:8108" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="8132:8241" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="8199:8238" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="8247:8414" ph="//..." />
-              <marker date="1533212114000" expanded="true" signature="8492:8594" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="8556:8590" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="8624:8654" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10125:10338" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10209:10258" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10285:10334" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10339:10376" ph="//..." />
-              <marker date="1533212114000" expanded="true" signature="10415:10555" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10481:10547" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10559:10601" ph="//..." />
-              <marker date="1533212114000" expanded="true" signature="10638:10814" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10709:10806" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="10731:10765" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="13156:13280" ph="..." />
-              <marker date="1533212114000" expanded="true" signature="13167:13270" ph="{...}" />
-              <marker date="1533212114000" expanded="true" signature="13291:13411" ph="..." />
-              <marker date="1533212114000" expanded="true" signature="13313:13393" ph="{...}" />
-            </folding>
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/videoPlayer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="183" column="14" lean-forward="false" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/DataBase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1554">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Geolocation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/H5新增表单特性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2160">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/test.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/consolidate模板.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Axios/axiosAll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue-Interaction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="53" column="58" lean-forward="true" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InterviewMap-master/JS/JS-ch.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Server1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Server2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Server3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Server4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Axios/axios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/node_modules/axios/dist/axios.min.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue2.0-lifeCycle&amp;filter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/angularWeiBo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-738">
+          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/weibo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="129" column="33" lean-forward="false" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-lifeCycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/boxMode.html" />
+    <entry file="file://$PROJECT_DIR$/JS/tdList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Vue-Example1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/icons.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/fullscreen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/drag.css" />
+    <entry file="file://$PROJECT_DIR$/JS/drag.js" />
+    <entry file="file://$PROJECT_DIR$/html/drag.html" />
+    <entry file="file://$PROJECT_DIR$/html/del.html" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1246">
+          <caret line="1382" column="0" lean-forward="false" selection-start-line="1382" selection-start-column="0" selection-end-line="1382" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Axios/XHR.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/lifeCircle-Vue2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="77" column="50" lean-forward="false" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Promise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/bootstrap-Carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1038">
+          <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/立体轮播图/img/img2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/立体轮播图/img/img1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/立体轮播图/js/jquery.flexslider-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1440">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/立体轮播图/img/dot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/立体轮播图/img/prev.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/立体轮播图/img/next.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/立体轮播图/banner图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="119" column="34" lean-forward="false" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/PromiseByself.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/dragCheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="89" column="44" lean-forward="false" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/banner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1392">
+          <caret line="115" column="25" lean-forward="true" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
