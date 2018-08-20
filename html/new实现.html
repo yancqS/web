@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new实现</title>
+</head>
+<body>
+<script>
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = function () {
+            alert(this.name);
+        };
+        console.log(this);
+    }
+    let person1 = new Person("yan",23,"stu");
+    let person2 = new Person("sun",23,"stus");
+    console.log(person1.__proto__ === person2.__proto__);//true
+    console.log(person1.__proto__ === Person.prototype);//true
+    console.log(Person.prototype.constructor === Person);//true
+    //因此person1.__proto__ = person2.__proto__ = Person
+    console.log(person1.name);//yan
+
+
+    let New = function (P) {
+        let o = {};//创建一个空对象
+        let arg = Array.prototype.slice.call(arguments,1);
+        //将构造函数的作用域赋给新对象
+        o.__proto__ = P.prototype;
+        P.prototype.constructor = P;
+        //执行构造函数代码
+        P.apply(o,arg);
+        //返回新对象
+        return o;
+    };
+    let p1 = New(Person,"Ysir",24,"stu");
+    let p2 = New(Person,"Sun",23,"stus");
+    console.log(p1.name);//Ysir
+    console.log(p2.name);//Sun
+    console.log(p1.__proto__ === p2.__proto__);//true
+    console.log(p1.__proto__ === Person.prototype);//true
+</script>
+</body>
+</html>

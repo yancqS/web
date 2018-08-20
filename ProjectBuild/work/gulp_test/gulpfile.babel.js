@@ -3,7 +3,7 @@
 import gulp from 'gulp';
 import _$ from 'gulp-load-plugins';
 import open from 'open';
-let $ = _$();
+const $ = _$();
 
 // import concat from 'gulp-concat';
 // import uglify from 'gulp-uglify';

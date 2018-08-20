@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gride</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 1px dashed #ccc;
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-template-rows: auto;
+            grid-column-gap: 3px;
+            grid-row-gap: 5px;
+            grid-template-areas: "head head head"
+                                  "midl . midr"
+                                  "foot foot foot";
+        }
+
+        .item {
+            display: flex;
+            font-size: 30px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .item1,.item2,.item3{
+            grid-area: head;
+            background: red;
+        }
+        .item4{
+            grid-area: midl;
+            background: green;
+        }
+        .item6{
+            grid-area: midr;
+            background: yellow;
+        }
+        .item7,.item8,.item9{
+            grid-area: foot;
+            background: #1b6d85;
+        }
+
+
+        /*.item:nth-child(2n+1) {
+            background: red;
+        }
+
+        .item:nth-child(2n) {
+            background: yellow;
+        }*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+</div>
+</body>
+</html>

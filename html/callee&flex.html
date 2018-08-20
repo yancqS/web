@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>caller</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body,html{
+            width: 100%;
+            height:100%;
+            font-size: 20px;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .wrapper{
+            width:100%;
+            height: 100%;
+            display: flex;
+            flex: 8;
+        }
+        .left{
+            background: red;
+        }
+        .right{
+            background: green;
+        }
+        .left,.right{
+            flex:0 0 100px;
+        }
+        .middle{
+            width:100%;
+            height: 100%;
+            margin:0 10px;
+            background: yellow;
+        }
+        .top,.bottom{
+            flex: 1;
+            background: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<script>
+    //child是parent内的函数，并在parent内执行child
+    function parent() {
+        let index = 0;
+        function child() {
+            //这里child的父函数就是parent
+            console.log(child.caller,index);
+        }
+
+        child();
+    }
+
+    //parent1没有被别人调用
+    function parent1() {
+        let index = 1;
+        //这里parent1没有父函数
+        console.log(parent1.caller,index);
+    }
+
+    //parent2调用了child2
+    function parent2() {
+        let index = 2;
+        child2(index);
+    }
+    function child2(index) {
+        console.log(child2.caller,index);
+    }
+
+
+    function parent3() {
+        let index = 3;
+        return (function child3() {
+            console.log(child3.caller,index);
+        })();
+    }
+
+    function parent4() {
+        let index = 4;
+        return function child4() {
+            console.log(child4.caller,index);
+        };
+    }
+
+
+
+    parent();
+    parent1();
+    parent2();
+    parent3();
+    parent4()();
+
+
+    /*function obj() {
+        console.log(arguments);
+        console.log(arguments.length);
+        console.log(arguments.callee);
+        console.log(arguments.callee.length);
+    }
+    obj(2,3,4);*/
+</script>
+<header class="top">Header</header>
+<div class="wrapper">
+    <div class="left">left</div>
+    <div class="middle">middle</div>
+    <div class="right">right</div>
+</div>
+<footer class="bottom">Footer</footer>
+</body>
+</html>

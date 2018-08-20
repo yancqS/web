@@ -8,26 +8,84 @@
     <meta charset="UTF-8">
     <title>angularTest</title>
     <script src="../JS/angular.js"></script>
+    <script src="../JS/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
     <script>
-        let app = angular.module('app',[]);
-        app.controller('main',function ($scope,$http,$sce) {
+        let app = angular.module('app', []);
+        app.controller('main', function ($scope, $http, $sce) {
             $scope.arr = [];
-            $scope.word='';
-            $scope.$watch('word',function () {
-               let resB = $sce.trustAsResourceUrl(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${$scope.word}`);
-                $http.jsonp(resB,{jsonpCallbackParam:'cb'}).then(res=>{
-                    $scope.arr=res.data.s;
-                },err=>{
-                    alert('error');
+            $scope.word = '';
+            $scope.index = -1;
+            $scope.show = function (e) {
+                let ev = e || window.event;
+                if (ev.keyCode === 38 || ev.keyCode === 40) return;
+                let resB = $sce.trustAsResourceUrl(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${$scope.word}`);
+                $http.jsonp(resB, {jsonpCallbackParam: 'cb'}).then(res => {
+                    $scope.arr = res.data.s;
+                }, err => {
+                    alert('error', err);
                 });
-            });
+            };
+            $scope.changeDown = function (e) {
+                let ev = e || window.event;
+                if (ev.keyCode === 40) { //下
+                    $scope.index++;
+                    $scope.word = $scope.arr[$scope.index];
+                    if ($scope.index >= $scope.arr.length) {
+                        $scope.index = 0;
+                    }
+                }
+                if (ev.keyCode === 38) { //上
+                    $scope.index--;
+                    $scope.word = $scope.arr[$scope.index];
+                    if ($scope.index < 0) {
+                        $scope.index = $scope.arr.length - 1;
+                    }
+                }
+                if (ev.keyCode === 13) {
+                    ev.preventDefault();
+                    location.href = `https://www.baidu.com/s?&wd=${$scope.arr[$scope.index]}`;
+                }
+            };
         });
     </script>
+    <style>
+        body {
+            background-image: url("../image/background.gif");
+        }
+
+        form {
+            height: 80px;
+        }
+
+        div ul li {
+            cursor: pointer;
+            list-style: none;
+            font-size: 18px;
+            font-family: "Adobe Caslon Pro";
+        }
+
+    </style>
 </head>
 <body ng-controller="main">
- <input type="text" title="" ng-model="word"/>
- <ul>
-     <li ng-repeat="str in arr">{{str}}</li>
- </ul>
+<form>
+    <div class="form-group col-md-6 col-md-offset-3 input-group">
+        <label for="search" style="font-family: 'Adobe Caslon Pro';font-size: 20px">你想知道啥:</label>
+        <br/>
+        <input class="form-control" type="text" id="search" ng-model="word" ng-keydown="changeDown($event)"
+               ng-keyup="show($event)"/>
+    </div>
+</form>
+
+<div>
+    <ul>
+        <li class="col-md-6 col-md-offset-3" ng-repeat="str in arr" ng-class='index == $index ?"bg-primary":""'>{{str}}</li>
+    </ul>
+</div>
+
+
 </body>
 </html>
+<!--
+ https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=
+-->
