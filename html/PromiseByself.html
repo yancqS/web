@@ -13,10 +13,10 @@
             this.value = '';
             this.onfulfilledArr = [];
             this.onrejectedArr = [];
-            this.resolve = this.resolve.bind(this);
-            this.reject = this.reject.bind(this);
+            this.Resolve = this.resolve.bind(this);
+            this.Reject = this.reject.bind(this);
             this.then = this.then.bind(this);
-            executor(this.resolve, this.reject);
+            executor(this.Resolve, this.Reject);
         }
 
         resolve (value) {

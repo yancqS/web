@@ -22,6 +22,7 @@
     console.log(Person.prototype.constructor === Person);//true
     //因此person1.__proto__ = person2.__proto__ = Person
     console.log(person1.name);//yan
+    console.log(person1.hasOwnProperty("name"));//true
 
 
     let New = function (P) {
