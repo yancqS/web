@@ -37,9 +37,9 @@ function ajax(json){
     }
 
     oAjax.onreadystatechange=function(){
-        if(oAjax.readyState==4){
+        if(oAjax.readyState===4){
             clearTimeout(timer);
-            if(oAjax.status>=200 && oAjax.status<300 || oAjax.status==304){
+            if(oAjax.status>=200 && oAjax.status<300 || oAjax.status===304){
                 json.success && json.success(oAjax.responseText);
             }else{
                 json.error && json.error(oAjax.status);

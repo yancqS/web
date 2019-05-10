@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="./src/js/jquery-3.1.1.js"></script>
+</head>
+<body>
+<div>
+    <input title="" type="text" id="in">
+    <button id="btn">添加</button>
+    <ul id="list"></ul>
+</div>
+
+<script>
+    function Page() {
+        
+    }
+    $.extend(Page.prototype,{
+        init:function () {
+            this.bindEvent();
+        },
+        bindEvent:function () {
+            let btn = $("#btn");
+            btn.on("click",$.proxy(this.handleButClick,this));
+        },
+        handleButClick:function () {
+            let li = document.createElement("li");
+            let input = $("#in");
+            li.innerHTML = input.val();
+            $("#list").css("font-size","25px").append(li);
+            input.val("");
+        }
+    });
+    let p = new Page();
+    p.init();
+</script>
+</body>
+</html>

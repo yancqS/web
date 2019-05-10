@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./src/js/vue2.js"></script>
+</head>
+<body>
+<div id="root">
+    <count ref="one" @change="handleChange"></count>
+    <count ref="two" @change="handleChange"></count>
+    <div>{{total}}</div>
+</div>
+
+<script>
+    let vm = new Vue({
+        el: "#root",
+        methods: {
+            handleClick: function () {
+                console.log(this.$refs.hello.innerHTML);
+            },
+            handleChange:function () {
+                this.total = this.$refs.one.num + this.$refs.two.num;
+            }
+        },
+        data: {
+            info: "hello world",
+            total:0
+        },
+        components: {
+            count: {
+                template: "<div @click='handleClick'>{{num}}</div>",
+                data() {
+                    return {
+                        num: 0
+                    }
+                },
+                methods:{
+                    handleClick:function () {
+                        this.num++;
+                        this.$emit("change");
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

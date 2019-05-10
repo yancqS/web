@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vueX(实现非父子组件通信)</title>
+    <script src="./src/js/vue2.js"></script>
+</head>
+<body>
+<div id="root">
+    <child content="Dell"></child>
+    <child content="Lee"></child>
+</div>
+
+<script>
+    /*
+    * 观察者模式/发布订阅模式/总线/Bus
+    * */
+    Vue.prototype.bus = new Vue();
+
+    let vm = new Vue({
+        el: "#root",
+        components: {
+            child: {
+                props: {
+                    content: String
+                },
+                data() {
+                    return {
+                        content_ : this.content
+                    }
+                },
+                components: {
+                    subchild: {
+                        props: ["subcon"],
+                        data() {
+                            return {
+                                subcon_: this.subcon
+                            }
+                        },
+                        template: "<div>{{subcon_}}</div>",
+                        mounted: function () {
+                            this.bus.$on("change", function (value) {
+                                this.subcon_ = value;
+                            }.bind(this))
+                        }
+                    }
+                },
+                template: "<div @click='handleClick'>{{content_}}<subchild subcon='subDell'></subchild></div>",
+                methods: {
+                    handleClick: function () {
+                        this.bus.$emit("change", this.content_);
+                    }
+                },
+                mounted: function () {
+                    let this_ = this;
+                    this.bus.$on("change", function (value) {
+                        this_.content_ = value;
+                    })
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

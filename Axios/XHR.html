@@ -15,6 +15,7 @@
                     if(request.readyState === 4){
                         if((request.status >= 200 &&request.status < 300) || request.status === 304){
                             alert(request.responseText);
+                            document.querySelector("#text").innerHTML = request.responseText;
                         }else{
                             alert("Request was unsuccessful :"+request.status);
                         }
@@ -26,5 +27,6 @@
 </head>
 <body>
     <input type="button" value="按钮" title="" id="btn1">
+    <span id="text">waiting...</span>
 </body>
 </html>

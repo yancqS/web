@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>velocity</title>
+    <style>
+        .rect {
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+    </style>
+    <script src="./src/js/vue2.js"></script>
+    <script src="./src/js/velocity.min.js"></script>
+</head>
+<body>
+<div id="root">
+    <transition
+                name="showRect"
+                @before-enter="handleBeforeEnter"
+                @enter="handleEnter"
+                @after-enter="handleAfterEnter"
+                @before-leave="handleBeforeLeave"
+                @leave="handleLeave"
+                @after-leave="handleAfterLeave"
+                :css="false"
+    >
+        <div class="rect" v-show="show"></div>
+    </transition>
+    <button @click="handleClick">切换显示方块</button>
+</div>
+
+<script>
+    let vm = new Vue({
+        el: '#root',
+        data: {
+            // show状态决定方块是显示还是隐藏
+            show: false
+        },
+        methods: {
+            handleClick: function () {
+                this.show = !this.show;
+            },
+            handleBeforeEnter: function (el) {
+                el.style.opacity = 0;
+                console.log('方块显示动画即将执行');
+            },
+            handleEnter: function (el, done) {
+                Velocity(el, 'stop');
+                Velocity(el, {
+                    backgroundColor: '#0085eb',
+                    opacity: 1,
+                    translateX: 260,
+                    rotateZ: ['360deg', 0]
+                }, {
+                    duration: 1000,
+                    easing: [ 0.4, 0.01, 0.165, 0.99 ],
+                    complete: done
+                });
+                console.log('方块显示动画执行中...');
+            },
+            handleAfterEnter: function (el) {
+                console.log('方块显示动画结束');
+            },
+            handleBeforeLeave: function (el) {
+                console.log('方块隐藏动画即将执行');
+            },
+            handleLeave: function (el, done) {
+                Velocity(el, 'stop');
+                Velocity(el, {
+                    backgroundColor: '#4dd0e1',
+                    opacity: 0,
+                    translateX: 0,
+                    rotateZ: [0, '360deg']
+                }, {
+                    duration: 1000,
+                    easing: [ 0.4, 0.01, 0.165, 0.99 ],
+                    complete: done
+                });
+                console.log('方块隐藏动画执行中...');
+            },
+            handleAfterLeave: function (el) {
+                console.log('方块隐藏动画结束');
+            }
+        }
+    });
+</script>
+</body>
+</html>

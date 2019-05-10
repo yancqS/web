@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rgb2SixteenBinary</title>
+</head>
+<body>
+<script>
+    let rgb = "rgb(255,56,134)";
+    let arr = rgb.split("(")[1].split(")")[0].split(",");
+    let color = "#";
+    arr.forEach((item)=>{
+         color += parseInt(item).toString(16);
+         return color;
+    });
+    console.log(color);
+</script>
+</body>
+</html>
