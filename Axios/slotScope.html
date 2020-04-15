@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>slotScope</title>
-    <script src="./src/js/vue2.js"></script>
+    <script src="../JS/vue2.js"></script>
 </head>
 <body>
 <div id="root">
     <child>
         <template slot-scope="props">
+            <li>{{props}}</li>
             <li>{{props.items}}</li>
         </template>
     </child>

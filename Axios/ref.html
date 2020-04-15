@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="./src/js/vue2.js"></script>
+    <script src="../JS/vue2.js"></script>
 </head>
 <body>
 <div id="root">
@@ -20,6 +20,8 @@
                 console.log(this.$refs.hello.innerHTML);
             },
             handleChange:function () {
+                /*console.log(this.$refs.one.$el);
+                console.log(this.$refs.two.$el);*/
                 this.total = this.$refs.one.num + this.$refs.two.num;
             }
         },
@@ -29,7 +31,7 @@
         },
         components: {
             count: {
-                template: "<div @click='handleClick'>{{num}}</div>",
+                template: "<input type='text' @click='handleClick' v-model='num'>",
                 data() {
                     return {
                         num: 0
